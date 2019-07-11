@@ -1,0 +1,151 @@
+baseURL: http://jaredreisinger.com/
+languageCode: en-us
+title: Jared Reisinger
+author: Jared Reisinger
+
+disableKinds:
+  - RSS
+  - taxonomy
+  - taxonomyTerm
+  
+# theme: goa
+theme: forty
+
+params:
+  name: Jared Reisinger
+  description: Software Engineer, Basenji Dad
+  # description: Detail-oriented, professional-grade.
+  favicon: favicon.ico
+  # image: foo.jpg
+  
+  navigation:
+    title: Jared Reisinger
+    subtitle: Software Engineer, Basenji Dad
+    # subtitle: Detail-oriented, professional-grade.
+    # menu: MeNU!
+    # logo: JaredR-profile-300x300.jpg
+    
+    links:
+      - name: Home
+        url: /
+
+      - name: About
+        url: /about/
+
+      - name: Résumé
+        url: /resume/
+
+      - name: Blog
+        url: /blog/
+
+      - name: Portfolio
+        url: /portfolio/
+        
+    # button1:
+    #   - name: Portfolio
+    #     url: /portfolio/
+    # 
+    # button2:
+    #   - name: Portfolio
+    #     url: /portfolio/
+
+  banner:
+    title: Hi, my name is Jared
+    # linebreaks flow through to HTML, rather than treated as markdown!
+    subtitle: |-
+      I've been a professional software developer for the last [OMG, that long?!] years, working in companies of all sizes.
+      
+      I also write a lot of software for fun.
+      
+      And, I play with my Basenjis.
+    buttonText: Explore
+    
+  tiles:
+    enable: true
+    showcase:
+      - title: Engineering
+        subtitle: Where the rubber meets the road
+        image: about/engineering.jpg 
+        url: /about/engineering
+
+      - title: Design
+        subtitle: Because how you feel about software matters
+        image: about/design.jpg
+        url: /about/design
+
+      - title: Open Source
+        subtitle: Contributing to the community at large
+        image: about/open-source.jpg
+        url: about/open-source
+
+      - title: Basenjis
+        subtitle: Four-legged maniacs
+        image: about/basenjis.jpg
+        url: /about/basenjis
+
+  # A plain-texty section after the tiles...
+  two:
+    enable: false
+    title: ...
+    subtitle: |-
+      ...
+      ...
+      ...
+    buttonText: Click me!
+    url: /404
+    
+  # See the exampleSite config for setting up formspree.io to do the email.
+  # formEmail: example@domain.com
+  # contact:
+  #   enable: true
+  #   buttonSend: send?
+  #   buttonClear: clear!
+  # 
+  #   email:
+  #     - title: Email
+  #       email: jaredreisinger@hotmail.com
+  #   phone:
+  #     - title: Phone
+  #       phone: +1 (425) 445-6407
+  #   address:
+  #     - title: Address
+  #       street: 29122 N 149th St.
+  #       city: Scottsdale, AZ 85262
+  #       country: United States
+
+  footer:
+    enable: true
+    copyright: 2019 Jared Reisinger. All Rights Reserved
+    social:
+      - label: GitHub
+        icon: fa-github
+        url: https://github.com/JaredReisinger
+        
+      - label: StackOverflow
+        icon: fa-stack-overflow
+        url: http://stackoverflow.com/users/60299/jaredreisinger
+
+      - label: LinkedIn
+        icon: fa-linkedin
+        url: https://www.linkedin.com/in/jaredreisinger/
+
+      # - label: Facebook
+      #   icon: fa-facebook
+      #   url: https://www.facebook.com/jared.reisinger
+      # 
+      # - label: Twitter
+      #   icon: fa-twitter
+      #   url: https://twitter.com/JaredReisinger/
+      # 
+      # - label: Instagram
+      #   icon: fa-instagram
+      #   url: https://www.instagram.com/jared_reisinger/
+
+    # quicklinks:
+    #   - text: label
+    #     alt: linked-text
+    #     url: /404
+    # 
+    #   - text: "prefix:"
+    #     alt: try me
+    #     url: /404

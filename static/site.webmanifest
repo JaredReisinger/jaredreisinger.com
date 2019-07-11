@@ -1,0 +1,14 @@
+{
+    "name": "Jared Reisinger",
+    "short_name": "Jared Reisinger",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#d03d5a",
+    "background_color": "#d03d5a",
+    "display": "standalone"
+}
