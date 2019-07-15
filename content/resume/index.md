@@ -37,7 +37,6 @@ Single-handedly wrote a source-code indexing and search service with a web front
 
 Created a Visual Studio project “flavor” to add PowerShell-supported deployment for any C#, VB, C++, or JavaScript project. This was inspired by a colleague that disliked managing numerous and disparate separate deployment scripts for prototype hardware projects. My solution enabled embedding the deployment script directly into the project, and tied directly into the Visual Studio “Build.Deploy” command.
 
-
 {{<resume-position
   "Senior Software Design Engineer, Bing"
   "Microsoft Corporation"
@@ -51,12 +50,11 @@ Designed and developed tools to assist in generation and analysis of user search
 
 Designed, implemented, and shipped a solution to allow result-specific excerpts to be provided for front-end display, including images, video, table-of-contents-style lists, and user-expandable content, resulting in a patent application.
 
-
 {{<resume-position
   "Software Design Engineer, Windows Live Message Boards"
   "Microsoft Corporation"
   "2006–2007">}}
-  
+
 Designed, developed, and shipped an AJAX-based web UI for a message boards incubation project, resulting in an easily skinnable and flexible product used for MSN, MSNBC, and other partners.
 
 {{<resume-position
@@ -67,7 +65,6 @@ Designed, developed, and shipped an AJAX-based web UI for a message boards incub
 Designed, implemented, and shipped features in almost every part of Money (versions 4.0 through 14.0), from back-end calculation engines to front-end custom UI controls, including core components of online banking, account register, budget engine, lifetime planner, and reports and charts.
 
 Led development effort for Money 2004 (version 12.0), overseeing feature set and development schedule, and ensuring a smooth release cycle.
-
 
 ## Patents
 
@@ -86,7 +83,6 @@ issued October 15, 2004
 
 In parallel with full-time employment at Microsoft, volunteered as the principal teacher for a full school-year AP Computer Science class of 30 high-school students. This entailed creating lesson plans and in-class activities, quizzes and tests, and projects, and grading all of those as well. My class performed above the national average on the 2013 AP Computer Science Exam, scoring fewer 1s and 2s, and more 3s and 4s.
 
-
 ## Education
 
 {{<resume-position
@@ -95,7 +91,6 @@ In parallel with full-time employment at Microsoft, volunteered as the principal
   "1989–1993">}}
 
 Graduated at age 19.
-
 
 ## Contact
 
