@@ -1,16 +1,13 @@
-// Misc.
 $misc: (
   z-index-base: 10000
 );
 
-// Duration.
 $duration: (
   menu: 0.35s,
   transition: 0.2s,
   banner: 2.5s
 );
 
-// Size.
 $size: (
   border-radius: 4px,
   element-height: 2.75em,
@@ -18,33 +15,50 @@ $size: (
   inner: 65em
 );
 
-// Font.
+// Fonts: original was Source Sans Pro and Courier New (yuck!)
+// Tried Literata, but even the regular (400) weight feels kind of heavy.
+// (https://fonts.googleapis.com/css?family=Literata:400,400i,700,700i)
+
 $font: (
   family: (
-    "Source Sans Pro",
+    // "Source Sans Pro",
+    "Titillium Web",
     Helvetica,
     sans-serif
   ),
   family-fixed: (
-    "Courier New",
+    // "Courier New",
+    "Source Code Pro",
     monospace
   ),
   weight: 300,
-  weight-bold: 600,
+  // weight: 400,
+  // weight-bold: 600,
+  weight-bold: 700,
   letter-spacing: 0.025em,
-  letter-spacing-alt: 0.25em
+  letter-spacing-alt: 0.25em,
+  // Would be nice to construct the URL from the parts above!
+  // url: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic"
+  url: "https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,700,700i&display=swap"
 );
 
 // Palette.
 $palette: (
-  bg: #242943,
-  bg-alt: #2a2f4a,
-  fg: #ffffff,
-  fg-bold: #ffffff,
-  fg-light: rgba(244, 244, 255, 0.2),
-  border: rgba(212, 212, 255, 0.1),
-  border-bg: rgba(212, 212, 255, 0.035),
-  highlight: #9bf1ff,
+  // bg: #242943,
+  // bg-alt: #2a2f4a,
+  // fg: #ffffff,
+  // fg-bold: #ffffff,
+  bg: #ffffff,
+  bg-alt: #eeeeee,
+  fg: #333333,
+  fg-bold: #000000,
+  // fg-light: rgba(244, 244, 255, 0.2),
+  fg-light: rgba(51, 51, 51, 0.5),
+  // border: rgba(212, 212, 255, 0.1),
+  // border: rgba(0, 0, 0, 0.1),
+  // border-bg: rgba(212, 212, 255, 0.035),
+  // highlight: #9bf1ff,
+  highlight: #6fc3df,
   accent1: #6fc3df,
   accent2: #8d82c4,
   accent3: #ec8d81,

@@ -4,7 +4,7 @@
 @import "libs/skel";
 @import "font-awesome.min";
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+@import url("https://fonts.googleapis.com/css?family=#{font-descriptor($font)}&display=swap");
 
 /*
 	Forty by HTML5 UP
