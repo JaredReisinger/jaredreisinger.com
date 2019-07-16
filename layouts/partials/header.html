@@ -4,47 +4,45 @@
 {{- $styleIE9 := resources.Get "css/ie9.scss" | resources.ToCSS $options -}}
 {{- $styleIE8 := resources.Get "css/ie8.scss" | resources.ToCSS $options -}}
 */ -}}
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	{{- with .Site.Params.description }}
-		<meta name="description" content="{{ . }}">
-	{{- end }}
-	{{- with .Site.Params.name }}
-		<meta name="author" content="{{ . }}">
-	{{- end }}
-	{{- /* hugo.Generator */ -}}
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+{{- with .Site.Params.description }}
+	<meta name="description" content="{{ . }}">
+{{- end }}
+{{- with .Site.Params.name }}
+	<meta name="author" content="{{ . }}">
+{{- end }}
+{{- /* hugo.Generator */ -}}
 
-	<title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
-	
-	{{- /* "<!-- Stylesheets -->" | safeHTML */ -}}
-	{{- /*
-	<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-	*/ -}}
+<title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
 
-	<link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}"/>
+{{- /* "<!-- Stylesheets -->" | safeHTML */ -}}
+{{- /*
+<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+*/ -}}
 
-	{{- /*
-	<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="{{ $styleIE9.RelPermalink }}"/><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="{{ $styleIE8.RelPermalink }}"/><![endif]-->
-	*/ -}}
+<link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}"/>
 
-	{{- range .Site.Params.custom_css -}}
-		<link rel="stylesheet" type="text/css" href="{{ . | relURL }}">
-	{{- end -}}
+{{- /*
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="{{ $styleIE9.RelPermalink }}"/><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="{{ $styleIE8.RelPermalink }}"/><![endif]-->
+*/ -}}
 
-	{{- with .Site.Params.favicon -}}
-		<link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
-		<link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
-	{{- end -}}
+{{- range .Site.Params.custom_css -}}
+	<link rel="stylesheet" type="text/css" href="{{ . | relURL }}">
+{{- end -}}
 
-	{{- /*
-	{{ "<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->" | safeHTML }}
-	{{ "<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->" | safeHTML }}
-	{{ "<!--[if lt IE 9]>" | safeHTML }}
-	<script src="js/ie/html5shiv.js"></script>
-	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
-	{{ "<![endif]-->" | safeHTML }}
-	*/ -}}
-</head>
+{{- with .Site.Params.favicon -}}
+	<link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
+	<link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
+{{- end -}}
+
+{{- /*
+{{ "<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->" | safeHTML }}
+{{ "<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->" | safeHTML }}
+{{ "<!--[if lt IE 9]>" | safeHTML }}
+<script src="js/ie/html5shiv.js"></script>
+<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+{{ "<![endif]-->" | safeHTML }}
+*/ -}}

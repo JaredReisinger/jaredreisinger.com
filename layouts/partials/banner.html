@@ -1,14 +1,34 @@
-{{- /* "<!-- Banner -->" | safeHTML */ -}}
-<section id="banner" class="major">
+{{- /*
+  The banner is used in *all* cases: home page, list, and simple... but
+  inconsistently.  I've tried to capture all the special edge cases, but it
+  might be worth rationalizing/normalizing these.
+*/ -}}
+
+{{- $banner := .Params.banner }}
+{{- $sectionId := (cond (isset .Params "banner") "banner" "one") }}
+{{- $title := $banner.title | default .Title }}
+{{- $subtitle := $banner.subtitle | default .Content }}
+{{- $sectionClass := $banner.class | default (cond .IsHome "major" (cond .IsNode "style2" "")) }}
+{{- $image := $banner.image | default .Params.image }}
+{{- $button := $banner.buttonText }}
+<section id="{{ $sectionId }}" class="{{ $sectionClass }}" data-image="{{ with $image }}/img/{{ . }}{{ end }}">
   <div class="inner">
     <header class="major">
-      <h1>{{ .Site.Params.Banner.title }}</h1>
+      <h1>{{ $banner.title | default .Title | markdownify }}</h1>
     </header>
     <div class="content">
-      <p>{{ .Site.Params.Banner.subtitle }}</p>
-      <ul class="actions">
-        <li><a href="#one" class="button next scrolly">{{ .Site.Params.Banner.buttonText }}</a></li>
-      </ul>
+      {{- with $banner.subtitle }}
+        <div>
+          {{ . | markdownify }}
+        </div>
+      {{- else }}
+        {{ .Content }}
+      {{- end }}
+      {{- with $banner.buttonText }}
+        <ul class="actions">
+          <li><a href="#one" class="button next scrolly">{{ . }}</a></li>
+        </ul>
+      {{- end }}
     </div>
   </div>
 </section>

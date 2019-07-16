@@ -1,0 +1,50 @@
+{{- $debug := .Site.Params.debug -}}
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+    {{- partial "header.html" . -}}
+    {{ block "headerExtra" . }}{{ end }}
+  </head>
+  <body>
+    {{- if $debug }}
+      <pre style="position: absolute; top: 5em; left: 65%; right: 1em; z-index: 1000; background: rgba(255,255,255,0.75); color: black; font-size: 75%; padding: 0.5em; white-space: pre-wrap">
+dir: {{ .Page.Dir }}
+title: {{ .Page.Title }}
+file: {{ .Page.File.Path }}
+fileDir: {{ .Page.File.Dir }}
+isHome: {{ .Page.IsHome }}
+isNode: {{ .Page.IsNode }}
+isPage: {{ .Page.IsPage }}
+kind: {{ .Page.Kind }}
+section: {{ .Page.Section }}
+pages: 
+  {{- range .Page.Pages }}
+    {{ .File.Path }}
+  {{- end }}
+desc: {{ .Page.Description }}
+params: {{ .Page.Params | jsonify }}
+      </pre>
+    {{- end }}    
+    
+    {{ block "body" .}}{{/* we may not need this block... */}}
+      <div id="wrapper">
+        {{- partial "nav.html" . -}}
+        {{- /*
+          The original Forty markup was highly inconsistent about when the
+          "main" div was used.  This is just a close approximation.
+        */ -}}
+        <div id="main" class="{{ if .IsPage }}alt{{ end }}">
+    			{{- partial "banner.html" . -}}
+          {{- partial "tile.html" . -}}
+          {{- partial "two.html" . -}}
+          {{ block "main" .}}
+            {{ .Content }}
+          {{ end }}
+          {{- partial "contact.html" . -}}
+        </div>
+        {{- partial "footer.html" . -}}
+      </div>
+    {{ end }}
+    {{- partial "js.html" . -}}
+  <body>
+</html>

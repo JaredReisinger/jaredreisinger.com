@@ -9,7 +9,7 @@ disableKinds:
   - taxonomyTerm
   
 # theme: goa
-theme: forty
+# theme: forty
 
 params:
   name: Jared Reisinger
@@ -17,6 +17,7 @@ params:
   # description: Detail-oriented, professional-grade.
   favicon: favicon.ico
   # image: foo.jpg
+  # debug: true
   
   navigation:
     title: Jared Reisinger
@@ -49,51 +50,52 @@ params:
     #   - name: Portfolio
     #     url: /portfolio/
 
-  banner:
-    title: Hi, my name is Jared
-    # linebreaks flow through to HTML, rather than treated as markdown!
-    subtitle: |-
-      I've been a professional software developer for the last [OMG, that long?!] years, working in companies of all sizes.
-      
-      I also write a lot of software for fun.
-      
-      And, I play with my Basenjis.
-    buttonText: Explore
-    
-  tiles:
-    enable: true
-    showcase:
-      - title: Engineering
-        subtitle: Where the rubber meets the road
-        image: about/engineering.jpg 
-        url: /about/engineering
-
-      - title: Design
-        subtitle: Because how you feel about software matters
-        image: about/design.jpg
-        url: /about/design
-
-      - title: Open Source
-        subtitle: Contributing to the community at large
-        image: about/open-source.jpg
-        url: about/open-source
-
-      - title: Basenjis
-        subtitle: Four-legged maniacs
-        image: about/basenjis.jpg
-        url: /about/basenjis
-
-  # A plain-texty section after the tiles...
-  two:
-    enable: false
-    title: ...
-    subtitle: |-
-      ...
-      ...
-      ...
-    buttonText: Click me!
-    url: /404
-    
+  # TODO: make banner and tiles an aspect of the page, not of the config.
+  # banner:
+  #   title: Hi, my name is Jared...
+  #   # linebreaks flow through to HTML, rather than treated as markdown!
+  #   subtitle: |-
+  #     I've been a professional software developer for the last [OMG, that long?!] years, working in companies of all sizes.
+  # 
+  #     I also write a lot of software for fun.
+  # 
+  #     And, I play with my Basenjis.
+  #   buttonText: Explore
+  # 
+  # tiles:
+  #   enable: true
+  #   showcase:
+  #     - title: Engineering
+  #       subtitle: Where the rubber meets the road
+  #       image: about/engineering.jpg 
+  #       url: /about/engineering
+  # 
+  #     - title: Design
+  #       subtitle: Because how you feel about software matters
+  #       image: about/design.jpg
+  #       url: /about/design
+  # 
+  #     - title: Open Source
+  #       subtitle: Contributing to the community at large
+  #       image: about/open-source.jpg
+  #       url: about/open-source
+  # 
+  #     - title: Basenjis
+  #       subtitle: Four-legged maniacs
+  #       image: about/basenjis.jpg
+  #       url: /about/basenjis
+  # 
+  # # A plain-texty section after the tiles...
+  # two:
+  #   enable: false
+  #   title: ...
+  #   subtitle: |-
+  #     ...
+  #     ...
+  #     ...
+  #   buttonText: Click me!
+  #   url: /404
+  # 
   # See the exampleSite config for setting up formspree.io to do the email.
   # formEmail: example@domain.com
   # contact:

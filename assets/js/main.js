@@ -199,23 +199,16 @@
         }, 100);
       });
     }
-
-    // Banner.
+    
+    // Use data-image attribute for banner image
     $banner.each(function() {
       var $this = $(this),
-        $image = $this.find(".image"),
-        $img = $image.find("img");
+        $image = $this.data("image");
 
-      // Parallax.
       $this._parallax(0.275);
 
-      // Image.
-      if ($image.length > 0) {
-        // Set image.
-        $this.css("background-image", "url(" + $img.attr("src") + ")");
-
-        // Hide original.
-        $image.hide();
+      if ($image && $image.length > 0) {
+        $this.css("background-image", "url(" + $image + ")");
       }
     });
 
