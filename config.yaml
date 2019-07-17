@@ -7,9 +7,11 @@ disableKinds:
   - RSS
   - taxonomy
   - taxonomyTerm
-  
-# theme: goa
-# theme: forty
+
+enableGitInfo: true
+googleAnalytics: UA-144036967-1
+
+pygmentsStyle: manni
 
 params:
   name: Jared Reisinger
@@ -36,11 +38,11 @@ params:
       - name: Résumé
         url: /resume/
 
-      - name: Blog
-        url: /blog/
-
-      - name: Portfolio
-        url: /portfolio/
+      # - name: Blog
+      #   url: /blog/
+      # 
+      # - name: Portfolio
+      #   url: /portfolio/
         
     # button1:
     #   - name: Portfolio

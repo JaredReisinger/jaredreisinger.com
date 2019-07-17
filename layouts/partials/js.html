@@ -25,7 +25,7 @@
   after main).  We'll include that in the bundle above (eventually) if we care.
 
   {{ range .Site.Params.custom_js }}
-      <script src="{{ . | absURL }}"></script>
+      <script src="{{ . | relURL }}"></script>
   {{ end }}
 
 */ -}}
