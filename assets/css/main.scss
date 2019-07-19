@@ -1,4 +1,5 @@
 $fa-font-path: "/webfonts";
+$fa-font-display: fallback;
 // @import "font-awesome/fontawesome";
 
 @import 'font-awesome/variables';
@@ -23,7 +24,7 @@ $fa-font-path: "/webfonts";
 @import "libs/mixins";
 @import "libs/skel";
 
-@import url("https://fonts.googleapis.com/css?family=#{font-descriptor($font)}&display=swap");
+@import url("https://fonts.googleapis.com/css?family=#{font-descriptor($font)}&display=fallback");
 
 /*
 	Forty by HTML5 UP
