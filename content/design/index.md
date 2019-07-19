@@ -3,7 +3,6 @@ title: Design
 description: Because how you feel about software matters
 weight: 30
 # date: 2019-07-10T17:55:23-07:00
-image: design.jpg
 ---
 
 The impact that perception and impression has on the experience of using software is often overlooked, in my opinion.  Yes, it's critical that software and tools operate correctly, and do so in a performant manner... but that's simply a baseline requirement.  What too much software misses, unfortunately, is that there is also an emotional and experiential aspect to user interaction.

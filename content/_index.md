@@ -7,29 +7,6 @@ banner:
   title: Hi, my name is Jared...
   buttonText: Explore
   
-x-tiles:
-  enable: true
-  showcase:
-    - title: Engineering
-      subtitle: Where the rubber meets the road
-      image: about/engineering.jpg 
-      url: /engineering
-
-    - title: Design
-      subtitle: Because how you feel about software matters
-      image: about/design.jpg
-      url: /design
-
-    - title: Open Source
-      subtitle: Contributing to the community at large
-      image: about/open-source.jpg
-      url: /open-source
-
-    - title: Basenjis
-      subtitle: Four-legged maniacs
-      image: about/basenjis.jpg
-      url: /basenjis
-
 # A plain-texty section after the tiles...
 two:
   enable: false

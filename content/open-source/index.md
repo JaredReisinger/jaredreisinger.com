@@ -2,8 +2,7 @@
 title: Open Source
 description: Contributing to the community at large
 weight: 50
-#date: 2019-07-10T17:55:29-07:00
-image: open-source.jpg
+# date: 2019-07-10T17:55:29-07:00
 ---
 
 > If I have developed greater software, it is by standing on the shoulders of giants.

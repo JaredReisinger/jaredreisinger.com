@@ -2,24 +2,22 @@
 title: Me
 description: You are on my site, after all
 weight: 10
-date: 2019-07-09T17:29:11-07:00
-# draft: true
-image: me.jpg
+# date: 2019-07-09T17:29:11-07:00
 ---
 
 ## A ton of practical development experience...
 
-I may not be a grizzled gray-beard, but I’ve been helping to professionally ship software since 1994, including both shrink-wrapped “software-in-a-box” and web-delivered services. I have proven experience at designing solutions correctly from the beginning to ensure that they will be ready by the time the deadline arrives. For all of the standard details, take a look at my résumé.
+I may not be a grizzled gray-beard, but I’ve been helping to professionally ship software since 1994, including both shrink-wrapped “software-in-a-box” and web-delivered services. I have proven experience at designing solutions correctly from the beginning to ensure that they will be ready by the time the deadline arrives. For all of the standard details, [take a look at my résumé](/resume).
 
 What may not jump out from my résumé is how often I have had to delve into a new or foreign codebase, whether from working on a feature or tracking down a pernicious bug, and come out with a deep understanding of another team’s code. This has resulted in “patch-and-go” fixes delivered to other teams, and to refactored and redesigned code that performs more reliably and with better performance characteristics.
 
 ## An eye for detail...
 
-I’m certainly not a designer[^*], but I’m obnoxiously good at noticing designs and user experiences that aren’t aesthetically pleasing. Have you ever noticed a restaurant menu or sign that uses a 0 (zero) instead of O (capital-oh), or vice-versa? How about publications that are layed out using spaces instead of tabs or other vertical guides? These things jump out at me all the time, often before I even have a chance to actually focus on the item in question.
+I’m certainly not a designer[^1], but I’m obnoxiously good at noticing designs and user experiences that aren’t aesthetically pleasing. Have you ever noticed a restaurant menu or sign that uses a 0 (zero) instead of O (capital-oh), or vice-versa? How about publications that are layed out using spaces instead of tabs or other vertical guides? These things jump out at me all the time, often before I even have a chance to actually focus on the item in question.
 
-I bring that same level of attention to the software I design and implement; in truth, I can’t really avoid it. Seeing code duplication or overly-convoluted if/else expressions results in an almost physical, visceral response. It must be fixed!
+I bring that same level of attention to the software I design and implement; in truth, I can’t really avoid it. Seeing code duplication or overly-convoluted if/else expressions results in an almost physical, visceral response. *It must be fixed!*
 
-[^*]: This site is okay, but believe me, I know it’s no masterpiece of web design. There are a ton of considerations that go into good design, and I know enough to know that I’m only consciously aware of a small number of them. That said, it’s like Associate Justice Potter Stewart wrote: “I know it when I see it.”
+[^1]: This site is okay, but believe me, I know it’s no masterpiece of web design. There are a ton of considerations that go into good design, and I know enough to know that I’m only consciously aware of a small number of them. That said, it’s like Associate Justice Potter Stewart wrote: “I know it when I see it.”
 
 ## Sees the big picture...
 
@@ -31,4 +29,4 @@ Okay, maybe not The Great Communicator, but at least a great communicator, wheth
 
 I also spent the 2012–2013 school year teaching high-school AP Computer Science, which taught me as much about communicating and presenting as I taught the students about programming.
 
-You can also take a look at my StackOverflow answers, to see more examples of my communication style.
+You can also take a look at [my StackOverflow answers](https://stackoverflow.com/users/60299/jaredreisinger?tab=answers&sort=votes) to see more examples of my communication style.

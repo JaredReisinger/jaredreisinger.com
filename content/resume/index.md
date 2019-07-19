@@ -1,9 +1,9 @@
 ---
 title: Résumé
 description: Summing up one's life in a page or so
-date: 2019-07-09T17:29:31-07:00
 weight: 60 # end of list, but before basenjis
 # weight: 15 # beginning of list, after "me"
+# date: 2019-07-09T17:29:31-07:00
 ---
 
 ## Principal Software Engineer
@@ -14,9 +14,37 @@ A professional software engineer with proven experience shipping dozens of relea
 
 ## Languages and Skills
 
-Platform Architecture, Extensibility, Asynchronous Programming, UI/UX Development, C#/.NET, async/await, WPF/XAML, MEF, Reactive Extensions, MVVM, ASP.NET, MVC, MSBuild, PowerShell, Javascript/AJAX/jQuery, HTML/CSS, C/C++, Java, SQL, PHP, Perl
+Javascript (full-stack), including React/Redux and ESM; Go-lang; Python; C#/.NET; platform architecture; CI/CD pipelines; Extensibility; Asynchronous Programming; UI/UX development; WPF/XAML; MEF; Reactive Extensions; MVVM; ASP.NET; MVC; MSBuild; PowerShell; C++; Java; SQL; PHP; Perl
 
 ## Experience
+
+{{<resume-position
+  "Principal Software Engineer"
+  "Built For Me"
+  "2018–present">}}
+
+Primary developer at a small startup, focused on driving to production-quality software and improving the user experience.
+
+{{<resume-position
+  "Senior Staff Engineer & Team Lead, HBO Code Labs"
+  "Home Box Office"
+  "2014–2018">}}
+
+Proposed and drove the implementation of a continuous integration/continuous delivery pipeline that vastly improved reliability and dropped turn-around time from roughly two weeks to less than one hour.
+
+Managed the nascent web-services Platform & Infrastructure team, responsible for maintaining and improving the CI/CD pipeline and promoting engineering "best practices". We also migrated the entire organization into containerization, further improving CI/CD latency and reducing infrastructure costs.
+
+Built and maintained a tool (with one other engineer) to monitor security and permissions of HBO Code Labs' myriad external SaaS tools and code repositories. Organization-wide policies became automatable and enforcable using this tool.
+
+_**Side Projects:** These projects were undertaken on my own initiative, based on needs that I saw during day-to-day work._
+
+Created an HBO-internal "homebrew" tap for tools and utilities, to improve discovery and distribution, and to promote sharing.
+
+Created an external-facing SMTP service with and internal-only web UI to facilitate signing up for SaaS offerings without locking that service to a particular user's account or needing an IT-provided email account to be created.
+
+Created an external-facing SMTP service to automatically route email to "top contributors" of any of our code repositories. This was used by the monitoring tool to repository notifications to active contributors _without_ spamming the entire engineering organization.
+
+Built a search tool to bridge the many disparate sources of information available internally: code repositories, issue trackers, discussion forums, and chat tools.
 
 {{<resume-position
   "Senior Software Design Engineer, Visual Studio"
@@ -70,11 +98,15 @@ Led development effort for Money 2004 (version 12.0), overseeing feature set and
 
 ## Patents
 
-Providing Representative Samples Within Search Result Sets — #20100211561
-filed August 19, 2010
+{{<resume-position
+  "Providing Representative Samples Within Search Result Sets"
+  "#20100211561"
+  "filed August 19, 2010">}}
 
-Versioning Component for Applications — #20060085860
-issued October 15, 2004
+{{<resume-position
+  "Versioning Component for Applications"
+  "#20060085860"
+  "issued October 15, 2004">}}
 
 ## Volunteering
 
@@ -92,7 +124,7 @@ In parallel with full-time employment at Microsoft, volunteered as the principal
   "University of Washington"
   "1989–1993">}}
 
-Graduated at age 19.
+Entered early via UW's "Early Entrance Program", enrolling at age 15 and graduating at age 19.
 
 ## Contact
 
