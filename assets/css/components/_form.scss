@@ -100,13 +100,12 @@ textarea {
 }
 
 .select-wrapper {
-  @include icon;
+  @include icon($fa-var-chevron-down);
   display: block;
   position: relative;
 
   &:before {
     color: _palette(border);
-    content: "\f078";
     display: block;
     height: _size(element-height);
     line-height: _size(element-height);

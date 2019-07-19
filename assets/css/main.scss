@@ -1,8 +1,27 @@
+$fa-font-path: "/webfonts";
+// @import "font-awesome/fontawesome";
+
+@import 'font-awesome/variables';
+@import 'font-awesome/mixins';
+@import 'font-awesome/core';
+// @import 'font-awesome/larger';
+// @import 'font-awesome/fixed-width';
+// @import 'font-awesome/list';
+// @import 'font-awesome/bordered-pulled';
+// @import 'font-awesome/animated';
+// @import 'font-awesome/rotated-flipped';
+// @import 'font-awesome/stacked';
+@import 'font-awesome/icons';
+// @import 'font-awesome/screen-reader';
+
+// @import "font-awesome/regular";
+@import "font-awesome/solid";
+@import "font-awesome/brands";
+
 @import "libs/vars";
 @import "libs/functions";
 @import "libs/mixins";
 @import "libs/skel";
-@import "font-awesome.min";
 
 @import url("https://fonts.googleapis.com/css?family=#{font-descriptor($font)}&display=swap");
 

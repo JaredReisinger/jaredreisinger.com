@@ -1,20 +1,17 @@
+// The 'icon' mixin is no longer necessary, and/or supplanted by FontAwesome's
+// own functionality?  (The "alt" look too, perhaps?)
+
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
+/// @param {string} $fa-set Optional FontAwesome set (fab, fas) to use
 /// @param {string} $where Optional pseudoelement to target (before or after).
-@mixin icon($content: false, $where: before) {
-  text-decoration: none;
-
+@mixin icon($content: false, $fa-set: fas, $where: before) {
   &:#{$where} {
+    @extend %fa-icon;
+    @extend .#{$fa-set};
     @if $content {
-      content: $content;
+      content: fa-content($content);
     }
-
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: none !important;
   }
 }
 

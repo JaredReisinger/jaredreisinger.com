@@ -5,9 +5,18 @@
 ///
 
 /* Icon */
-
 .icon {
   @include icon;
+  &.brand {
+    @include icon(false, fab);
+  }
+  &.solid {
+    @include icon(false, fas);
+  }
+  // &.regular {
+  //   @include icon(false, far);
+  // }
+
   border-bottom: none;
   position: relative;
 
@@ -15,6 +24,7 @@
     display: none;
   }
 
+  // TODO?: replace with .fa-stack?
   &.alt {
     &:before {
       background-color: _palette(fg-bold);
