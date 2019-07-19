@@ -1,0 +1,47 @@
+{{- /*
+  The "tiles" section might be pulled in because a page explicitly asks for
+  tiles and provides a list of "showcase" values... or it might be used as the
+  rendering style for any section/IsNode page.
+*/ -}}
+
+{{- if (or .IsNode .Params.tiles.enable) }}
+  <section id="one" class="tiles">
+    {{- range .Params.tiles.showcase }}
+    <article>
+      <span class="image">
+        {{/* TODO: why not simply relative? why baseURL? */}}
+        {{/* <img src="{{ .Site.Params.baseURL }}img/{{ .image }}" alt="" /> */}}
+        <img src="/img/{{ .image }}" alt="" />
+      </span>
+      <header class="major">
+        <h3><a href="{{ .url | relURL }}" class="link">{{ .title }}</a></h3>
+        <p>{{ .subtitle }}</p>
+      </header>
+    </article>
+    {{- else }}
+      {{- range .Pages }}
+        <article>
+          {{- $tile := .Resources.GetMatch "tile.jpg" -}}
+          {{- $tileW := .Resources.GetMatch "tile.webp" -}}
+          {{- .Scratch.SetInMap "debug" "01-page" . -}}
+          {{- .Scratch.SetInMap "debug" "02-desc" .Params.description -}}
+          {{- .Scratch.SetInMap "debug" "03-tile" $tile -}}
+          {{- .Scratch.SetInMap "debug" "03-tileW" $tileW -}}
+          {{- /* .Scratch.SetInMap "debug" "10-params" .Params */ -}}
+          {{- .Scratch.SetInMap "debug" "11-resources" .Resources -}}
+          {{- partial "debug.html" (slice . (.Scratch.Get "debug")) -}}
+          {{- .Scratch.Delete "debug" -}}
+          {{- if $tile }}
+            <span class="image">
+              <img src="{{ ($tile.Resize "x500 q75").RelPermalink }}" alt="" />
+            </span>
+          {{- end }}
+          <header class="major">
+            <h3><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a></h3>
+            <p>{{ .Description | markdownify }}</p>
+          </header>
+        </article>
+      {{- end }}
+    {{- end }}
+  </section>
+{{- end }}

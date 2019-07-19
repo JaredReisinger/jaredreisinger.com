@@ -1,7 +1,9 @@
 ---
-title: "Résumé"
+title: Résumé
+description: Summing up one's life in a page or so
 date: 2019-07-09T17:29:31-07:00
-# draft: true
+weight: 60 # end of list, but before basenjis
+# weight: 15 # beginning of list, after "me"
 ---
 
 ## Principal Software Engineer

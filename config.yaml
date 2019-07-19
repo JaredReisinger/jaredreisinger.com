@@ -16,31 +16,39 @@ pygmentsStyle: manni
 params:
   name: Jared Reisinger
   description: Software Engineer, Basenji Dad
-  # description: Detail-oriented, professional-grade.
   favicon: favicon.ico
-  # image: foo.jpg
   # debug: true
   
   navigation:
     title: Jared Reisinger
     subtitle: Software Engineer, Basenji Dad
-    # subtitle: Detail-oriented, professional-grade.
-    # menu: MeNU!
-    # logo: JaredR-profile-300x300.jpg
+    # menu: Menu # a label for the hamburger menu, if desired
     
     links:
       - name: Home
         url: /
-
-      - name: About
-        url: /about/
-
+    
+      - name: Me
+        url: /me/
+    
+      - name: Engineering
+        url: /engineering/
+    
+      - name: Design
+        url: /design/
+    
+      - name: Open Source
+        url: /open-source/
+    
       - name: Résumé
         url: /resume/
 
+      - name: Basenjis
+        url: /basenjis/
+
       # - name: Blog
       #   url: /blog/
-      # 
+      #
       # - name: Portfolio
       #   url: /portfolio/
         

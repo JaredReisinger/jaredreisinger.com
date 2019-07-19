@@ -4,27 +4,37 @@
   might be worth rationalizing/normalizing these.
 */ -}}
 
-{{- $banner := .Params.banner }}
-{{- $sectionId := (cond (isset .Params "banner") "banner" "one") }}
-{{- $title := $banner.title | default .Title }}
-{{- $subtitle := $banner.subtitle | default .Content }}
-{{- $sectionClass := $banner.class | default (cond .IsHome "major" (cond .IsNode "style2" "")) }}
-{{- $image := $banner.image | default .Params.image }}
-{{- $button := $banner.buttonText }}
-<section id="{{ $sectionId }}" class="{{ $sectionClass }}" data-image="{{ with $image }}/img/{{ . }}{{ end }}">
+{{- $scratch := newScratch -}}
+
+{{- $scratch.Set "sectionId" "one" -}}
+{{- $scratch.Set "title" .Title -}}
+{{- $scratch.Set "subtitle" .Content -}}
+{{- $scratch.Set "sectionClass" (cond .Page.IsHome "major" (cond .Page.IsNode "style2" "")) -}}
+{{- $image := .Resources.GetMatch "banner.jpg" -}}
+{{- /*$imageW := .Resources.GetMatch "banner.webp"*/ -}}
+{{- if $image -}}
+  {{- $scratch.Set "image" ($image.Resize "x600 q80").RelPermalink -}}
+{{- end -}}
+{{- /*$scratch.Set "" ""*/ -}}
+
+{{- with .Page.Params.banner -}}
+  {{- $scratch.Set "sectionId" "banner" -}}
+  {{- if isset . "title" }}{{ $scratch.Set "title" .title }}{{ end -}}
+  {{- if isset . "subtitle"}}{{ $scratch.Set "subtitle" .subtitle }}{{ end -}}
+  {{- if isset . "class"}}{{ $scratch.Set "sectionClass" .class }}{{ end -}}
+  {{- if isset . "image"}}{{ $scratch.Set "image" .image }}{{ end -}}
+  {{- /* note that 'isset' needs an all-lower-case lookup!? */ -}}
+  {{- if isset . "buttontext"}}{{ $scratch.Set "buttonText" .buttontext }}{{ end -}}
+{{- end -}}
+
+<section id="{{ $scratch.Get "sectionId" }}" class="{{ $scratch.Get "sectionClass" }}" data-image="{{ $scratch.Get "image" }}">
   <div class="inner">
     <header class="major">
-      <h1>{{ $banner.title | default .Title | markdownify }}</h1>
+      <h1>{{ $scratch.Get "title" | markdownify }}</h1>
     </header>
     <div class="content">
-      {{- with $banner.subtitle }}
-        <div>
-          {{ . | markdownify }}
-        </div>
-      {{- else }}
-        {{ .Content }}
-      {{- end }}
-      {{- with $banner.buttonText }}
+      <div>{{ $scratch.Get "subtitle" | markdownify }}</div>
+      {{- with $scratch.Get "buttonText" }}
         <ul class="actions">
           <li><a href="#one" class="button next scrolly">{{ . }}</a></li>
         </ul>

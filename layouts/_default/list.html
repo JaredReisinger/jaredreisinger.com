@@ -2,7 +2,9 @@
   {{/* the list content is surfaced via the banner, so nothing happens here */}}
   {{ "" | safeHTML }}{{/* a non-null no-op! */}}
 
-  {{/* TODO: lift this to use tile or two... */}}
+  {{- /* TODO: lift this to use tile or two? ... */ -}}
+  {{- /* this is uglier than tiles, so we no longer use it. */ -}}
+  {{- /*
   {{- if (not .Params.tiles.enable) }}
     <section id="two" class="spotlights">
       {{- range .Pages }}
@@ -25,5 +27,6 @@
       {{- end }}
     </section>
   {{- end }}
+  */ -}}
 
 {{ end }}
