@@ -10,11 +10,11 @@ weight: 60 # end of list, but before basenjis
 
 **Architects rock-solid platforms • Designs and implements best-of-breed solutions • Effectively communicates with both technical and non-technical peers and partners • Mentors junior developers regarding best practices and professional software development**
 
-A professional software engineer with proven experience shipping dozens of releases of production-quality software, both for end-users’ machines and on servers in the cloud. Passionate about software design at an architectural level and also from a user-interface/user-experience point-of-view. Understands the tradeoffs inherent in getting it out the door. Able to dig deep into existing codebases to understand and successfully refactor and redesign when needed.
+A professional software engineer with proven experience shipping hundreds of releases of production-quality software, both for end-users’ machines and on servers in the cloud. Passionate about software design at an architectural level and also from a user-interface/user-experience point-of-view. Understands the tradeoffs inherent in getting it out the door. Able to dig deep into existing codebases to understand and successfully refactor and redesign when needed.
 
 ## Languages and Skills
 
-Javascript (full-stack), including React/Redux and ESM; Go-lang; Python; C#/.NET; platform architecture; CI/CD pipelines; Extensibility; Asynchronous Programming; UI/UX development; WPF/XAML; MEF; Reactive Extensions; MVVM; ASP.NET; MVC; MSBuild; PowerShell; C++; Java; SQL; PHP; Perl
+Javascript (full-stack), including React/Redux/Relay and ESM; Go-lang; Python; C#/.NET; platform architecture; CI/CD pipelines; Extensibility; Asynchronous Programming; UI/UX development; WPF/XAML; MEF; Reactive Extensions; MVVM; ASP.NET; MVC; MSBuild; PowerShell; C++; Java; SQL; PHP; Perl; Bash
 
 ## Experience
 
@@ -40,9 +40,9 @@ _**Side Projects:** These projects were undertaken on my own initiative, based o
 
 Created an HBO-internal "homebrew" tap for tools and utilities, to improve discovery and distribution, and to promote sharing.
 
-Created an external-facing SMTP service with and internal-only web UI to facilitate signing up for SaaS offerings without locking that service to a particular user's account or needing an IT-provided email account to be created.
+Created an external-facing SMTP service with an internal-only web UI to facilitate instantaneous signup for SaaS offerings without locking that service to a particular user's email address or needing an IT-provided email address to be pre-created.
 
-Created an external-facing SMTP service to automatically route email to "top contributors" of any of our code repositories. This was used by the monitoring tool to repository notifications to active contributors _without_ spamming the entire engineering organization.
+Created an external-facing SMTP service to automatically route email to "top contributors" of any of our code repositories. This was used by the monitoring tool to send repository notifications to active contributors _without_ spamming the entire engineering organization.
 
 Built a search tool to bridge the many disparate sources of information available internally: code repositories, issue trackers, discussion forums, and chat tools.
 
