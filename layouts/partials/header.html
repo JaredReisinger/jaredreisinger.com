@@ -4,6 +4,7 @@
 {{- $styleIE9 := resources.Get "css/ie9.scss" | resources.ToCSS $options -}}
 {{- $styleIE8 := resources.Get "css/ie8.scss" | resources.ToCSS $options -}}
 */ -}}
+
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -46,3 +47,11 @@
 <script src="js/ie/html5shiv.jsrespond.min.js"></script>
 {{ "<![endif]-->" | safeHTML }}
 */ -}}
+
+{{- /*
+	Get page-specific styles, if they exist...
+*/ -}}
+{{- $pageCss := .Resources.GetMatch "page.scss" -}}
+{{- if $pageCss }}
+	<link rel="stylesheet" type="text/css" href="{{ ($pageCss | resources.ToCSS $options).RelPermalink }}"/>
+{{- end }}
