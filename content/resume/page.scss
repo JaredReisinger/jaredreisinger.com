@@ -1,0 +1,5 @@
+/* leader-bar before h2 sections */
+h2:not(:first-of-type) {
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+}
