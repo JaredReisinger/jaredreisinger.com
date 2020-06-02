@@ -18,28 +18,28 @@ params:
   description: Software Engineer, Basenji Dad
   favicon: favicon.ico
   # debug: true
-  
+
   navigation:
     title: Jared Reisinger
     subtitle: Software Engineer, Basenji Dad
     # menu: Menu # a label for the hamburger menu, if desired
-    
+
     links:
       - name: Home
         url: /
-    
+
       - name: Me
         url: /me/
-    
+
       - name: Engineering
         url: /engineering/
-    
+
       - name: Design
         url: /design/
-    
+
       - name: Open Source
         url: /open-source/
-    
+
       - name: Résumé
         url: /resume/
 
@@ -51,11 +51,11 @@ params:
       #
       # - name: Portfolio
       #   url: /portfolio/
-        
+
     # button1:
     #   - name: Portfolio
     #     url: /portfolio/
-    # 
+    #
     # button2:
     #   - name: Portfolio
     #     url: /portfolio/
@@ -70,34 +70,38 @@ params:
   #     ...
   #   buttonText: Click me!
   #   url: /404
-  # 
+  #
   # See the exampleSite config for setting up formspree.io to do the email.
   # formEmail: example@domain.com
   # contact:
   #   enable: true
   #   buttonSend: send?
   #   buttonClear: clear!
-  # 
+  #
   #   email:
   #     - title: Email
   #       email: jaredreisinger@hotmail.com
   #   phone:
   #     - title: Phone
-  #       phone: +1 (425) 445-6407
+  #       phone: +1 (###) ###-####
   #   address:
   #     - title: Address
-  #       street: 29122 N 149th St.
-  #       city: Scottsdale, AZ 85262
+  #       street: 12345 Main St.
+  #       city: Some City, ST 99999
   #       country: United States
 
   footer:
     enable: true
-    copyright: 2019 Jared Reisinger. All Rights Reserved
+    copyright: 2020 Jared Reisinger. All Rights Reserved
     social:
       - label: GitHub
         icon: fa-github
         url: https://github.com/JaredReisinger
-        
+
+      - label: npm
+        icon: fa-npm
+        url: https://npmjs.com/~jaredreisinger
+
       - label: StackOverflow
         icon: fa-stack-overflow
         url: http://stackoverflow.com/users/60299/jaredreisinger
@@ -109,20 +113,19 @@ params:
       # - label: Facebook
       #   icon: fa-facebook
       #   url: https://www.facebook.com/jared.reisinger
-      # 
+      #
       # - label: Twitter
       #   icon: fa-twitter
       #   url: https://twitter.com/JaredReisinger/
-      # 
+      #
       # - label: Instagram
       #   icon: fa-instagram
       #   url: https://www.instagram.com/jared_reisinger/
-
     # quicklinks:
     #   - text: label
     #     alt: linked-text
     #     url: /404
-    # 
+    #
     #   - text: "prefix:"
     #     alt: try me
     #     url: /404

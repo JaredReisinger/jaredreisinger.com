@@ -11,7 +11,10 @@ Much of my work over the last several years has been centered around automating 
 
 Good examples of the kind of "best processes" I aim for can be found in:
 
-- [**order-fetcher**](https://github.com/JaredReisinger/order-fetcher): An easy-to-use command-line for extracting order/item data from a WooCommerce site. I use Greenkeeper to keep an eye on dependencies---and in many cases it handles updates entirely hands-free---and any commits are automatically built via Travis CI. Further, the `semantic-release` tool ensures that the version number is bumped and a new package published to npm based entirely on the kind of change in the commit.
+- [**@jaredreisinger/react-crossword**](https://github.com/JaredReisinger/react-crossword) ([npm](https://www.npmjs.com/package/@jaredreisinger/react-crossword)): A flexible, responsive, and easy-to-use crossword component for React apps.  I used first Greenkeeper, and then Snyk to keep an eye on dependencies---in many cases it handles updates entirely hands-free---and any commits are automatically built via Travis CI. Further, the `semantic-release` tool ensures that the version number is bumped and a new package published to npm based entirely on the kind of change in the commit.
+
+
+- [**order-fetcher**](https://github.com/JaredReisinger/order-fetcher): An easy-to-use command-line for extracting order/item data from a WooCommerce site. I used first Greenkeeper, and then Snyk to keep an eye on dependencies---in many cases it handles updates entirely hands-free---and any commits are automatically built via Travis CI. Further, the `semantic-release` tool ensures that the version number is bumped and a new package published to npm based entirely on the kind of change in the commit.
 
 - [**semantic-release-image**](https://github.com/JaredReisinger/semantic-release-image): The `semantic-release` toolset, packaged as a standalone Docker image and updated weekly.  This project uses GitHub Actions to automatically build and deploy the most recent versions of the tool and plugins, and helps any project---but especially non-Node.js ones---use `semantic-release` to manange releases.
 

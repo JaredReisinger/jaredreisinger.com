@@ -15,7 +15,7 @@ What may not jump out from my résumé is how often I have had to delve into a n
 
 I’m certainly not a designer[^1], but I’m obnoxiously good at noticing designs and user experiences that aren’t aesthetically pleasing. Have you ever noticed a restaurant menu or sign that uses a 0 (zero) instead of O (capital-oh), or vice-versa? How about publications that are layed out using spaces instead of tabs or other vertical guides? These things jump out at me all the time, often before I even have a chance to actually focus on the item in question.
 
-I bring that same level of attention to the software I design and implement; in truth, I can’t really avoid it. Seeing code duplication or overly-convoluted if/else expressions results in an almost physical, visceral response. *It must be fixed!*
+I bring that same level of attention to the software I design and implement; in truth, I can’t really avoid it. Seeing code duplication or overly-convoluted if/else expressions results in an almost physical, visceral response. _It must be fixed!_
 
 [^1]: This site is okay, but believe me, I know it’s no masterpiece of web design. There are a ton of considerations that go into good design, and I know enough to know that I’m only consciously aware of a small number of them. That said, it’s like Associate Justice Potter Stewart wrote: “I know it when I see it.”
 
