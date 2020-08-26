@@ -3,11 +3,8 @@ title: The `.tooling/` directory, a proposal
 description: Towards a more-organized root directory
 date: 2020-08-25T13:16:00-07:00
 
-# draft: true
-# tile: https://unsplash.com/photos/Kw_zQBAChws
-
-tileImage: https://unsplash.com/photos/Kw_zQBAChws
-tileAttrib: Ashim D’Silva
+# tileImage: https://unsplash.com/photos/Kw_zQBAChws
+# tileAttrib: Ashim D’Silva
 
 banner:
   enabled: true
