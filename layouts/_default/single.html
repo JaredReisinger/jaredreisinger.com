@@ -1,4 +1,16 @@
 {{ define "main" }}
-  {{/* the content is surfaced via the banner (WTF!), so nothing happens here */}}
-  {{ "" | safeHTML }}{{/* a non-null no-op! */}}
+  {{- /*
+    If the banner was used, we don't need to show the title... but if not...
+  */ -}}
+  <section id="single">
+    <div class="inner">
+      {{- if not .Page.Params.banner }}
+        <h1>{{ .Title | markdownify }}</h1>
+      {{- end }}
+      {{- if .Date }}
+        <p style="text-align: right">{{ .Date.Format .Site.Params.dateFormat }}</p>
+      {{- end }}
+      {{ .Content }}
+    </div>
+  </section>
 {{ end }}

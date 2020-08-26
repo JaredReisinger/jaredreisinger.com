@@ -1,44 +1,26 @@
 {{- /*
-  The banner is used in *all* cases: home page, list, and simple... but
-  inconsistently.  I've tried to capture all the special edge cases, but it
-  might be worth rationalizing/normalizing these.
+  I've reworked the banner to prevent it from showing "content" by default,
+  because that was just confusing, and wrong.
 */ -}}
 
-{{- $scratch := newScratch -}}
+{{- if .Page.Params.banner -}}
+  {{- $banner := .Page.Params.banner -}}
+  {{- $image := .Resources.GetMatch "banner.jpg" -}}
 
-{{- $scratch.Set "sectionId" "one" -}}
-{{- $scratch.Set "title" .Title -}}
-{{- $scratch.Set "subtitle" .Content -}}
-{{- $scratch.Set "sectionClass" (cond .Page.IsHome "major" (cond .Page.IsNode "style2" "")) -}}
-{{- $image := .Resources.GetMatch "banner.jpg" -}}
-{{- /*$imageW := .Resources.GetMatch "banner.webp"*/ -}}
-{{- if $image -}}
-  {{- $scratch.Set "image" ($image.Resize "x600 q80").RelPermalink -}}
-{{- end -}}
-{{- /*$scratch.Set "" ""*/ -}}
-
-{{- with .Page.Params.banner -}}
-  {{- $scratch.Set "sectionId" "banner" -}}
-  {{- if isset . "title" }}{{ $scratch.Set "title" .title }}{{ end -}}
-  {{- if isset . "subtitle"}}{{ $scratch.Set "subtitle" .subtitle }}{{ end -}}
-  {{- if isset . "class"}}{{ $scratch.Set "sectionClass" .class }}{{ end -}}
-  {{- if isset . "image"}}{{ $scratch.Set "image" .image }}{{ end -}}
-  {{- /* note that 'isset' needs an all-lower-case lookup!? */ -}}
-  {{- if isset . "buttontext"}}{{ $scratch.Set "buttonText" .buttontext }}{{ end -}}
-{{- end -}}
-
-<section id="{{ $scratch.Get "sectionId" }}" class="{{ $scratch.Get "sectionClass" }}" data-image="{{ $scratch.Get "image" }}">
-  <div class="inner">
-    <header class="major">
-      <h1>{{ $scratch.Get "title" | markdownify }}</h1>
-    </header>
-    <div class="content">
-      <div>{{ $scratch.Get "subtitle" | markdownify }}</div>
-      {{- with $scratch.Get "buttonText" }}
-        <ul class="actions">
-          <li><a href="#one" class="button next scrolly">{{ . }}</a></li>
-        </ul>
-      {{- end }}
+  <section id="banner" {{ with $banner.class }}class="{{ . }}"{{end}} {{ with $image }}data-image="{{ (.Resize "x600 q80").RelPermalink }}"{{end}}>
+    <div class="inner">
+      <header class="major">
+        <h1>{{ $banner.title | default .Title | markdownify }}</h1>
+      </header>
+      <div class="content">
+        <div>{{ $banner.subtitle | default .Description | markdownify }}</div>
+        {{ with $banner.buttonText }}
+          <ul class="actions">
+            <li><a href="#one" class="button next scrolly">{{ . }}</a></li>
+          </ul>
+        {{- end }}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+{{- end -}}
+

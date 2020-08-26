@@ -1,7 +1,7 @@
 ---
 title: Basenjis
 description: Four-legged maniacs
-weight: 100
+weight: 1000
 # date: 2019-07-10T17:55:35-07:00
 ---
 

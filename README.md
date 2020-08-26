@@ -4,6 +4,18 @@
 
 Content and layout for [jaredreisinger.com](https://jaredreisinger.com) website. Uses Netlify's GitHub integration to automatically deploy this Hugo-driven site _for free!_
 
+
+### Notes to self...
+
+Images are minimized via `guetzli`, and WebP variants created with `cwebp`:
+
+```shell
+some-page/ $ guetzli --verbose original.jpg tile.jpg
+some-page/ $ cwebp -preset photo -v -mt original.jpg -o tile.webp
+```
+
+_(Actually, we pre-process with hugo, so maybe we don't need to?)_
+
 ### History
 
 Layout and SCSS/JS originally from [Forty](https://themes.gohugo.io/forty/) (and also [on github](https://github.com/MarcusVirg/forty)), but substantially revamped to minimize and streamline, and customize.

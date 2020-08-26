@@ -1,32 +1,74 @@
 {{ define "main" }}
+
   {{/* the list content is surfaced via the banner, so nothing happens here */}}
   {{ "" | safeHTML }}{{/* a non-null no-op! */}}
 
   {{- /* TODO: lift this to use tile or two? ... */ -}}
   {{- /* this is uglier than tiles, so we no longer use it. */ -}}
-  {{- /*
   {{- if (not .Params.tiles.enable) }}
-    <section id="two" class="spotlights">
-      {{- range .Pages }}
+    <section class="content">
+      <div class="inner">
+        {{- if not .Page.Params.banner }}
+          <h1>{{ .Title | markdownify }}</h1>
+        {{- end }}
+
+        {{ .Content }}
+
         <section>
-          <a href="{{ .Permalink }}" class="image">
-             <img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
-          </a>
-          <div class="content">
-            <div class="inner">
-              <header class="major">
-                <h3>{{ .Title }}</h3>
-              </header>
-              <p>{{ .Description }}</p>
-              <ul class="actions">
-                <li><a href="{{ .Permalink }}" class="button">Learn more</a></li>
-              </ul>
+          {{- range .Pages }}
+            <article style="position: relative; display: flex; align-items: center;">
+              {{- $tile := .Resources.GetMatch "tile.jpg" -}}
+              {{- $tileW := .Resources.GetMatch "tile.webp" -}}
+              {{- .Scratch.SetInMap "debug" "01-page" . -}}
+              {{- .Scratch.SetInMap "debug" "02-kind" .Kind -}}
+              {{- .Scratch.SetInMap "debug" "02-date" .Date -}}
+              {{- .Scratch.SetInMap "debug" "03-desc" .Params.description -}}
+              {{- .Scratch.SetInMap "debug" "04-tile" $tile -}}
+              {{- .Scratch.SetInMap "debug" "05-tileW" $tileW -}}
+              {{- /* .Scratch.SetInMap "debug" "10-params" .Params */ -}}
+              {{- .Scratch.SetInMap "debug" "11-resources" .Resources -}}
+              {{- partial "debug.html" (slice . (.Scratch.Get "debug")) -}}
+              {{- .Scratch.Delete "debug" -}}
+      
+              {{- if $tile }}
+                <span class="image" style="margin-right: 1em;">
+                  <img src="{{ ($tile.Resize "x200 q75").RelPermalink }}" alt="" />
+                </span>
+              {{- end }}
+              <div style="flex-grow: 1; display: flex; align-items: baseline;">
+                <header>
+                  <h4><a href="{{ .RelPermalink }}" class="link" style="margin-bottom: 0">{{ .Title | markdownify }}</a>{{ if .Description }} <small style="font-size: 84%; font-weight: normal;">— {{ .Description }}</small>{{end}}</h4>
+                </header>
+                <div style="font-size: 84%; font-weight: normal; margin-left: 2em; flex-grow: 1; text-align: right;">{{ .Date.Format .Site.Params.dateFormat }}</div>
             </div>
-          </div>
+            </article>
+          {{- end }}
         </section>
-      {{- end }}
+    </div>
     </section>
   {{- end }}
-  */ -}}
 
 {{ end }}
+
+{{- /*
+  The list format used to use the "spotlight" section class... that could become
+  it's own "requested" layout, like "tiles" are.
+
+  <section class="spotlights">
+    <section>
+      <a href="{{ .Permalink }}" class="image">
+          <img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
+      </a>
+      <div class="content">
+        <div class="inner">
+          <header class="major">
+            <h3>{{ .Title }}</h3>
+          </header>
+          <p>{{ .Description }}</p>
+          <ul class="actions">
+            <li><a href="{{ .Permalink }}" class="button">Read more</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+*/ -}}
