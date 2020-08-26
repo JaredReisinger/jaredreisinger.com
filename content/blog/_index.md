@@ -1,5 +1,6 @@
 ---
 title: "Blog"
+description: Random musings, thoughts, ideas, etc.
 weight: 100
 #date: 2020-08-25T13:16:00-07:00
 # banner:
