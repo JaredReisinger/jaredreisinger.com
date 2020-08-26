@@ -19,6 +19,8 @@ params:
   favicon: favicon.ico
   # debug: true
 
+  dateFormat: January 2, 2006
+
   navigation:
     title: Jared Reisinger
     subtitle: Software Engineer, Basenji Dad
@@ -40,15 +42,15 @@ params:
       - name: Open Source
         url: /open-source/
 
+      - name: Blog
+        url: /blog/
+
       - name: Résumé
         url: /resume/
 
       - name: Basenjis
         url: /basenjis/
 
-      # - name: Blog
-      #   url: /blog/
-      #
       # - name: Portfolio
       #   url: /portfolio/
 

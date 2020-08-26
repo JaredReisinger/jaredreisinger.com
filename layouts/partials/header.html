@@ -1,57 +1,34 @@
-{{- $options := (dict "outputStyle" "compressed") -}}
-{{- $style := resources.Get "css/main.scss" | resources.ToCSS $options -}}
-{{- /*
-{{- $styleIE9 := resources.Get "css/ie9.scss" | resources.ToCSS $options -}}
-{{- $styleIE8 := resources.Get "css/ie8.scss" | resources.ToCSS $options -}}
-*/ -}}
+{{- $options := (dict "outputStyle" "compressed") }}
+{{- $style := resources.Get "css/main.scss" | toCSS $options | fingerprint }}
 
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 {{- with .Site.Params.description }}
-	<meta name="description" content="{{ . }}">
+  <meta name="description" content="{{ . }}">
 {{- end }}
 {{- with .Site.Params.name }}
-	<meta name="author" content="{{ . }}">
+  <meta name="author" content="{{ . }}">
 {{- end }}
 {{- /* hugo.Generator */ -}}
 
 <title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
 
-{{- /* "<!-- Stylesheets -->" | safeHTML */ -}}
-{{- /*
-<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-*/ -}}
-
 <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}"/>
 
-{{- /*
-<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="{{ $styleIE9.RelPermalink }}"/><![endif]-->
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="{{ $styleIE8.RelPermalink }}"/><![endif]-->
-*/ -}}
+{{- range .Site.Params.custom_css }}
+  <link rel="stylesheet" type="text/css" href="{{ . | relURL }}">
+{{- end }}
 
-{{- range .Site.Params.custom_css -}}
-	<link rel="stylesheet" type="text/css" href="{{ . | relURL }}">
-{{- end -}}
-
-{{- with .Site.Params.favicon -}}
-	{{- /* <link rel="shortcut icon" type="image/x-icon" href="{{ . | relURL }}"> */ -}}
-	<link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
-{{- end -}}
+{{- with .Site.Params.favicon }}
+  {{- /* <link rel="shortcut icon" type="image/x-icon" href="{{ . | relURL }}"> */ -}}
+  <link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
+{{- end }}
 
 {{- /*
-{{ "<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->" | safeHTML }}
-{{ "<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->" | safeHTML }}
-{{ "<!--[if lt IE 9]>" | safeHTML }}
-<script src="js/ie/html5shiv.js"></script>
-<script src="js/ie/html5shiv.jsrespond.min.js"></script>
-{{ "<![endif]-->" | safeHTML }}
-*/ -}}
-
-{{- /*
-	Get page-specific styles, if they exist...
+  Get page-specific styles, if they exist...
 */ -}}
 {{- $pageCss := .Resources.GetMatch "page.scss" -}}
 {{- if $pageCss }}
-	<link rel="stylesheet" type="text/css" href="{{ ($pageCss | resources.ToCSS $options).RelPermalink }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ ($pageCss | toCSS $options | fingerprint).RelPermalink }}"/>
 {{- end }}
