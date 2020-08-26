@@ -130,10 +130,6 @@ It's important and useful to not conflate "files needed for tools used by the pr
 
 {{</side-by-side>}}
 
-#### Why call it `.tooling/`, and not `.config/`?
-
-It's important and useful to not conflate "files needed for tools used by the project" with "configuration files for the project itself". The project config files may well be packaged with or deploy with the project, but the tooling configuration files almost certainly won't. Further, it makes it much more apparent where to look when, for example, one needs to adjust the ESLint settings: the tooling needs to change, and the necessary file is in `.tooling/`. For the more philosophical among you, naming the directory `.tooling/` is a matter of "name it for its _purpose_ (semantics), not for what it _is_ (syntax)".  It is less important that the files within are config files, and more important that the files within are for tooling. This also has the advantage that it becomes reasonable to put _non_-config tooling-related files here, such as in the "or even" case of the above example, or Storybook's `preview.js`, or project-local tooling scripts, and so on.
-
 With its constituent files now hidden away, the leading period in the name `.tooling/` may not be strictly necessary. It serves a similar purpose to the leading period on the individual file names, however, subtly indicating that it's "not exactly" a part of the project, and in many presentations shifting the directory up and away from core project directories like `docs/` or `src/`.
 
 #### What would have to happen?
