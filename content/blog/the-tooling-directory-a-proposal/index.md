@@ -125,7 +125,7 @@ What a difference this makes! Not only does it de-clutter the root directory, bu
 {{%/side-by-side-item%}}
 
 {{<side-by-side-item>}}
-{{<figure src="organized-raw.jpg" width="300" attr="Photo by Edgar Chaparro" attrlink="https://unsplash.com/photos/r6mBXuHnxBk">}}
+{{<figure src="organized.jpg" width="300" attr="Photo by Edgar Chaparro" attrlink="https://unsplash.com/photos/r6mBXuHnxBk">}}
 {{</side-by-side-item>}}
 
 {{</side-by-side>}}
