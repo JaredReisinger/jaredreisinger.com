@@ -7,7 +7,7 @@ weight: 50
 
 > If I have developed greater software, it is by standing on the shoulders of giants.
 >
-> <cite>---not quite [Isaac Newton (or Bernard of Chartres)](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants)</cite>
+> {{<cite before="not quite" person="Isaac Newton (or Bernard of Chartres)" href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants" >}}
 
 With so much in software and technology dependent on the open sharing of information and past effort, I would be remiss not to do so myself. Much of my work is owned by the companies for which I've worked, but some of it---and much of my personal effort---is open source.
 

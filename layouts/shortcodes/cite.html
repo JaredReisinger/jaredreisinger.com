@@ -1,0 +1,30 @@
+{{- $person := .Get "person" }}
+{{- $work := .Get "work" }}
+{{- $href := .Get "href" }}
+
+{{- /*
+  determine how to format the citation, depending on the presence of person
+  and/or work
+*/ -}}
+
+<p>—{{ " " }}
+  {{- with .Get "before" -}}{{ . }}{{ " " }}{{ end }}
+  {{- if $person -}}
+    {{- if and $href (not $work) -}}
+      <a target="_blank" href="{{ $href }}">{{ $person }}</a>
+    {{- else -}}
+      {{- $person -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $work -}}
+    {{- if $person -}}, {{ end -}}
+    <cite>
+      {{- if $href -}}
+        <a target="_blank" href="{{ $href }}">{{ $work }}</a>    
+      {{- else -}}
+        {{- $work -}}
+      {{- end -}}
+    </cite>
+  {{- end -}}
+  {{- with .Get "after" -}}{{ " " }}{{ . }}{{ end }}
+</p>

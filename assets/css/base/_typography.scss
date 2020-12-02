@@ -65,6 +65,10 @@ i {
 
 p {
   margin: 0 0 _size(element-margin) 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 h1,
@@ -136,10 +140,15 @@ sup {
 
 blockquote {
   border-left: solid 4px _palette(border);
-  font-style: italic;
+  background: _palette(border-bg);
+  font-size: 75%;
+  /* font-style: italic; */
   margin: 0 0 _size(element-margin) 0;
-  padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4)
-    _size(element-margin);
+  padding: (_size(element-margin) / 2) _size(element-margin);
+}
+
+cite {
+  font-style: italic;
 }
 
 code {
