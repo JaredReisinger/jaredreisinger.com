@@ -39,7 +39,7 @@ Proposed and drove the implementation of a continuous integration/continuous de
 
 Managed the nascent web-services Platform & Infrastructure team, responsible for maintaining and improving the CI/CD pipeline and promoting engineering “best practices”. We also migrated the entire organization into containerization, further improving CI/CD latency and reducing infrastructure costs.
 
-Built and maintained a tool (with one other engineer) to monitor security and permissions of HBO Code Labs’ myriad external SaaS tools and code repositories. Organization-wide policies became automatable and enforcable using this tool.
+Built and maintained a tool (with one other engineer) to monitor security and permissions of HBO Code Labs’ myriad external SaaS tools and code repositories. Organization-wide policies became automatable and enforceable using this tool.
 
 _**Side Projects:** These projects were undertaken on my own initiative, based on needs that I saw during day-to-day work._
 
