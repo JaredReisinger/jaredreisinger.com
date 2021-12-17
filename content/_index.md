@@ -7,11 +7,11 @@ banner:
   class: major
   title: Hi, my name is Jared...
   subtitle: |-
-    I've been a professional software developer for the last _[OMG, that long?!]_ years, working in companies of all sizes.
+    I’ve been a professional software developer since 1994, working in companies of all sizes.
 
-    I also write a lot of software for fun.
+    I also write a lot of software for fun.
 
-    And, I play with my Basenjis.
+    And, I play with my Basenjis.
     
   buttonText: Explore
 
@@ -31,8 +31,8 @@ tiles:
 
 ---
 
-I've been a professional software developer for the last _[OMG, that long?!]_ years, working in companies of all sizes.
+I’ve been a professional software developer since 1994, working in companies of all sizes.
 
-I also write a lot of software for fun.
+I also write a lot of software for fun.
 
-And, I play with my Basenjis.
+And, I play with my Basenjis.

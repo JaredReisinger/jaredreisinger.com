@@ -15,6 +15,8 @@ In particular, I'm proud of:
 
 - [**@jaredreisinger/react-crossword**](https://github.com/JaredReisinger/react-crossword) ([npm](https://www.npmjs.com/package/@jaredreisinger/react-crossword)): A flexible, responsive, and easy-to-use crossword component for React apps. After some dissatisfaction with the existing crossword component libraries (all apparently forked from the same original source), I decided to create my own, and it quickly shot to the top of the [npm search results for "react crossword"](https://www.npmjs.com/search?q=react%20crossword).
 
+- [**puppycam.turehounds.com**](https://github.com/JaredReisinger/puppycam.turehounds.com): A site that hosts a 24/7 live-stream of the puppies we’ve whelped (only live for a couple of months every two or three years!) with news and other details about the puppies as they grow. The site is designed to auto-deploy and auto-refresh any time changes are made to the source.
+
 - [**order-fetcher**](https://github.com/JaredReisinger/order-fetcher) ([npm](https://www.npmjs.com/package/order-fetcher)): An easy-to-use command-line for extracting order/item data from a WooCommerce site. As the technical point-of-contact for both the Seattle Kennel Club and Evergreen Basenji Club, I use order-fetcher to generate detailed order information for other club members.
 
 - [**specialty-slurper**](https://github.com/JaredReisinger/specialty-slurper): Fills a niche need for the annual [Basenji Club of America](https://basenji.org) Yearbook, which includes the winners of all Basenji [specialties](https://www.akc.org/sports/conformation/resources/conformation-explanation/) for the year. There's more hard-coded logic in this tool than I'd prefer, but it saves _hours_ of time for the Yearbook editor every year.

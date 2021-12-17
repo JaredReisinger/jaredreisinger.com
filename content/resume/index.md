@@ -29,7 +29,6 @@ Proposed and/or drove solutions for myriad engineering best practices: engineeri
 
 Designed and implemented novel UX for natural-language-processed user input, providing affordance for adjusting as-recognized terms directly in-place in the editing UI (examples at <https://www.untasked.me/>).
 
-
 {{<resume-position
   "Senior Staff Architect/Engineer Lead, HBO Code Labs"
   "Home Box Office, Inc."
@@ -60,7 +59,7 @@ Built a search tool to bridge the many disparate sources of information availab
   "Senior Software Design Engineer, Visual Studio"
   "2009–2013">}}
 
-Designed and implemented the addition of Windows Phone 8.1 support to the AppX manifest designer. New platforms and platform features can be added and the designer UI adapts to the platform features at runtime, resulting in a single codebase to maintain, reducing duplicated code.  Redesigned the AppX manifest designer’s multi-resolution image management implementation to handle the UI presentation of hundreds of simultaneous images without adversely impacting responsiveness.
+Designed and implemented the addition of Windows Phone 8.1 support to the AppX manifest designer. New platforms and platform features can be added and the designer UI adapts to the platform features at runtime, resulting in a single codebase to maintain, reducing duplicated code. Redesigned the AppX manifest designer’s multi-resolution image management implementation to handle the UI presentation of hundreds of simultaneous images without adversely impacting responsiveness.
 
 Designed and implemented 3rd-party extensibility point for managing “connected services” used to integrate Windows Azure Mobile Services into end-developer applications. This design is subsequently being used as a model for the redesign of the core Visual Studio behavior to “add a new item” of any type to any project.
 
