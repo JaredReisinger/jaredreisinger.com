@@ -25,8 +25,8 @@ As important as the details are, I also know how critical it is to step back and
 
 ## The Great Communicator...
 
-Okay, maybe not The Great Communicator, but at least a great communicator, whether it’s disucussing technical details among programmers, making trade-offs across functional teams, or talking to “regular folks”. You’d never know I was a typical introverted programmer in these contexts (unless you were one as well, and understood how much easier it is when you’re talkng about something you know well).
+Okay, maybe not The Great Communicator, but at least _a_ great communicator, whether it’s disucussing technical details among programmers, making trade-offs across functional teams, or talking to “regular folks”. You’d never know I was a typical introverted programmer in these contexts (unless you were one as well, and understood how much easier it is when you’re talkng about something you know well).
 
 I also spent the 2012–2013 school year teaching high-school AP Computer Science, which taught me as much about communicating and presenting as I taught the students about programming.
 
-You can also take a look at [my StackOverflow answers](https://stackoverflow.com/users/60299/jaredreisinger?tab=answers&sort=votes) to see more examples of my communication style.
+You can take a look at [my StackOverflow answers](https://stackoverflow.com/users/60299/jaredreisinger?tab=answers&sort=votes) to see examples of my communication style, or look at [any](/engineering) of [my](/design) [openly](/open-source) available projects.

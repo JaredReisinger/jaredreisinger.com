@@ -51,11 +51,11 @@
     h3 {
       font-size: 1.75em;
 
-      a {
+      /* a {
         &:hover {
           color: inherit !important;
         }
-      }
+      } */
     }
 
     .link.primary {
@@ -96,6 +96,16 @@
     &:hover {
       &:before {
         opacity: 0;
+      }
+
+      header, h3 {
+        text-shadow: 0 0 0.2em white, 0 0 1em white, 0 0 1em white, 0 0 1em white;
+        @include vendor("transition", "text-shadow 0.5s ease");
+      }
+
+      header.major>:first-child:after {
+        box-shadow:  0 0 0.2em white, 0 0 1em white, 0 0 1em white, 0 0 1em white;
+        @include vendor("transition", "box-shadow 0.5s ease");
       }
     }
 

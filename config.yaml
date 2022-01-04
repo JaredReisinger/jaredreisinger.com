@@ -94,7 +94,7 @@ params:
 
   footer:
     enable: true
-    copyright: 2020 Jared Reisinger. All Rights Reserved
+    copyright: 2022 Jared Reisinger. All Rights Reserved
     social:
       - label: GitHub
         icon: fa-github
