@@ -33,8 +33,10 @@ Designed and implemented novel UX for natural-language-processed user input, pro
 
 {{<resume-position
   "Senior Staff Architect/Engineer Lead, HBO Code Labs"
-  "Home Box Office, Inc."
+  "HBO (Home Box Office, Inc.)"
   "2014–March, 2018">}}
+
+_**Background:**_ HBO offered video streaming services even before Netflix, but had a monolithic system that could not handle the demand imposed by _Game of Thrones_. I helped them navigate the process of migrating to more-scalable microservices and successfully weather the later seasons without service outages.
 
 Proposed and drove the implementation of a continuous integration/continuous delivery pipeline that vastly improved reliability and dropped turn-around time from roughly two weeks to less than one hour.
 
