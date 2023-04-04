@@ -22,6 +22,8 @@ $fa-font-display: fallback;
 @import "libs/vars";
 @import "libs/functions";
 @import "libs/mixins";
+
+$breakpoints: null;
 @import "libs/skel";
 
 @import url("https://fonts.googleapis.com/css?family=#{font-descriptor($font)}&display=fallback");

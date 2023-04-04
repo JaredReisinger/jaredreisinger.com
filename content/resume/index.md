@@ -22,8 +22,20 @@ Javascript (full-stack), including React/Redux/Relay and ESM; MongoDB/Mongoose N
 
 {{<resume-position
   "Principal Software Engineer"
+  "Drizly, LLC."
+  "March, 2022–present">}}
+
+Proposed and/or drove solutions for myriad engineering best practices: engineering reliability, build and deployment pipeline, and testing code coverage.
+
+Developed migration plan for migrating legacy VMs (AWS EC2) to a containerized solution.
+
+Served as gatekeeper for best practices as member of architectural review board.
+
+
+{{<resume-position
+  "Principal Software Engineer"
   "Built For Me, Inc."
-  "March, 2018–present">}}
+  "March, 2018–February 2022">}}
 
 Primary software engineer for self-funded startup, developing novel UX for task-tracking and related data management.
 
