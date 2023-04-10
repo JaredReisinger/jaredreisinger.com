@@ -16,14 +16,14 @@ A professional software engineer with proven experience shipping hundreds of rel
 
 ## Languages and Skills
 
-Javascript (full-stack), including React/Redux/Relay and ESM; MongoDB/Mongoose NoSQL; Go-lang; Python; C#/.NET; platform architecture; CI/CD pipelines; Extensibility; Asynchronous Programming; UI/UX development; WPF/XAML; MEF; Reactive Extensions; MVVM; ASP.NET; MVC; MSBuild; PowerShell; C++; Java; SQL; PHP; Perl; Bash
+Javascript/Typescript (full-stack), including React/Redux/Relay and ESM; MongoDB/Mongoose NoSQL; Go-lang; Python; C#/.NET; platform architecture; CI/CD pipelines; Extensibility; Asynchronous Programming; UI/UX development; WPF/XAML; MEF; Reactive Extensions; MVVM; ASP.NET; MVC; MSBuild; PowerShell; C++; Java; SQL; PHP; Perl; Bash
 
 ## Experience
 
 {{<resume-position
   "Principal Software Engineer"
   "Drizly, LLC."
-  "March, 2022–present">}}
+  "March 2022–present">}}
 
 Proposed and/or drove solutions for myriad engineering best practices: engineering reliability, build and deployment pipeline, and testing code coverage.
 
@@ -35,7 +35,7 @@ Served as gatekeeper for best practices as member of architectural review board.
 {{<resume-position
   "Principal Software Engineer"
   "Built For Me, Inc."
-  "March, 2018–February 2022">}}
+  "March 2018–February 2022">}}
 
 Primary software engineer for self-funded startup, developing novel UX for task-tracking and related data management.
 
@@ -46,9 +46,9 @@ Designed and implemented novel UX for natural-language-processed user input, pro
 {{<resume-position
   "Senior Staff Architect/Engineer Lead, HBO Code Labs"
   "HBO (Home Box Office, Inc.)"
-  "2014–March, 2018">}}
+  "2014–March 2018">}}
 
-_**Background:**_ HBO offered video streaming services even before Netflix, but had a monolithic system that could not handle the demand imposed by _Game of Thrones_. I helped them navigate the process of migrating to more-scalable microservices and successfully weather the later seasons without service outages.
+_**Background:**_ HBO offered video streaming services even before Netflix but had a monolithic system that could not handle the demand imposed by _Game of Thrones_. I helped them navigate the process of migrating to more-scalable microservices and successfully weather the later seasons without service outages.
 
 Proposed and drove the implementation of a continuous integration/continuous delivery pipeline that vastly improved reliability and dropped turn-around time from roughly two weeks to less than one hour.
 
@@ -75,9 +75,9 @@ Built a search tool to bridge the many disparate sources of information availab
   "Senior Software Design Engineer, Visual Studio"
   "2009–2013">}}
 
-Designed and implemented the addition of Windows Phone 8.1 support to the AppX manifest designer. New platforms and platform features can be added and the designer UI adapts to the platform features at runtime, resulting in a single codebase to maintain, reducing duplicated code. Redesigned the AppX manifest designer’s multi-resolution image management implementation to handle the UI presentation of hundreds of simultaneous images without adversely impacting responsiveness.
+Designed and implemented the addition of Windows Phone 8.1 support to the AppX manifest designer. New platforms and platform features could be added and the designer UI adapted to the platform features at runtime, resulting in a single codebase to maintain, reducing duplicated code. Redesigned the AppX manifest designer’s multi-resolution image management implementation to handle the UI presentation of hundreds of simultaneous images without adversely impacting responsiveness.
 
-Designed and implemented 3rd-party extensibility point for managing “connected services” used to integrate Windows Azure Mobile Services into end-developer applications. This design is subsequently being used as a model for the redesign of the core Visual Studio behavior to “add a new item” of any type to any project.
+Designed and implemented third-party extensibility point for managing “connected services” used to integrate Windows Azure Mobile Services into end-developer applications. This design was subsequently used as a model for the redesign of the core Visual Studio behavior to “add a new item” of any type to any project.
 
 Designed and implemented tool to migrate thousands of legacy and proprietary setup authoring files into open-source WiX authoring, resulting in significantly improved componentization and flexibility.
 
@@ -93,7 +93,7 @@ Created a Visual Studio project “flavor” to add PowerShell-supported deploym
   "Senior Software Design Engineer, Bing"
   "2007–2009">}}
 
-Led technical and UI/UX design of Bing search relevance experimentation platform, and implemented core components, resulting in a more than 100-fold increase in productivity of the Bing search relevance team.
+Led technical and UI/UX design of Bing search relevance experimentation platform and implemented core components, resulting in a more than 100-fold increase in productivity of the Bing search relevance team.
 
 Trained development team in Beijing to assume ongoing responsibility of experimentation platform support and development.
 
