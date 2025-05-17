@@ -61,47 +61,6 @@ params:
       - name: Basenjis
         url: /basenjis/
 
-      # - name: Portfolio
-      #   url: /portfolio/
-
-    # button1:
-    #   - name: Portfolio
-    #     url: /portfolio/
-    #
-    # button2:
-    #   - name: Portfolio
-    #     url: /portfolio/
-
-  # # A plain-texty section after the tiles...
-  # two:
-  #   enable: false
-  #   title: ...
-  #   subtitle: |-
-  #     ...
-  #     ...
-  #     ...
-  #   buttonText: Click me!
-  #   url: /404
-  #
-  # See the exampleSite config for setting up formspree.io to do the email.
-  # formEmail: example@domain.com
-  # contact:
-  #   enable: true
-  #   buttonSend: send?
-  #   buttonClear: clear!
-  #
-  #   email:
-  #     - title: Email
-  #       email: jaredreisinger@hotmail.com
-  #   phone:
-  #     - title: Phone
-  #       phone: +1 (###) ###-####
-  #   address:
-  #     - title: Address
-  #       street: 12345 Main St.
-  #       city: Some City, ST 99999
-  #       country: United States
-
   footer:
     enable: true
     social:

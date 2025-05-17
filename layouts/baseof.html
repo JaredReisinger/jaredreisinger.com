@@ -30,11 +30,9 @@
         <div id="main">
     			{{- partial "banner.html" . -}}
           {{- partial "tiles.html" . -}}
-          {{- partial "two.html" . -}}
           {{ block "main" .}}
             {{ .Content }}
           {{ end }}
-          {{- partial "contact.html" . -}}
         </div>
         {{- partial "footer.html" . -}}
       </div>

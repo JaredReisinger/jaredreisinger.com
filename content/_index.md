@@ -18,17 +18,6 @@ banner:
 tiles:
   enable: true
 
-# # A plain-texty section after the tiles...
-# two:
-#   enable: false
-#   title: ...
-#   subtitle: |-
-#     ...
-#     ...
-#     ...
-#   buttonText: Click me!
-#   url: /404
-
 ---
 
 I’ve been a professional software developer since 1994, working in companies of all sizes.

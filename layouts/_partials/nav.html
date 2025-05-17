@@ -20,12 +20,4 @@
         <li><a href="{{ .url | relURL}}">{{ .name }}</a></li>
     {{- end }}
   </ul>
-  <ul class="actions vertical">
-    {{- range site.Params.Navigation.button1 }}
-        <li><a href="{{ .url | relURL}}" class="button special fit">{{ .name }}</a></li>
-    {{- end }}
-    {{- range site.Params.Navigation.button2 }}
-        <li><a href="{{ .url | relURL}}" class="button fit">{{ .name }}</a></li>
-    {{- end }}
-  </ul>
 </nav>
