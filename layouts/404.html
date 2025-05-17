@@ -1,6 +1,6 @@
 <!-- Here you can create a custom 404 page when user finds a broken link or page. -->
 <!DOCTYPE HTML>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 
   {{ partial "header.html" . }}
   <body>
@@ -13,13 +13,13 @@
     {{ "<!-- Main -->" | safeHTML }}
       <div id="main">
         <div class="inner">
-          <h1>{{ .Site.Params.Error404.heading }}</h1>
-          <p>{{ .Site.Params.Error404.text | markdownify }}</p>
+          <h1>{{ site.Params.Error404.heading }}</h1>
+          <p>{{ site.Params.Error404.text | markdownify }}</p>
         </div>
       </div>
 
     {{ "<!-- Footer -->" | safeHTML}}
-      {{ if .Site.Params.Footer.enable }}
+      {{ if site.Params.Footer.enable }}
         {{ partial "footer.html" . }}
       {{ end }}
 

@@ -1,20 +1,30 @@
 baseURL: http://jaredreisinger.com/
 languageCode: en-us
 title: Jared Reisinger
-author: Jared Reisinger
+# author: Jared Reisinger ### not really a setting! see site.params.author
+
+# now generated dynamically from current time and site.Params.Author
+# copyright: 2025 Jared Reisinger. All Rights Reserved.
+
+timezone: America/Phoenix
 
 disableKinds:
-  - RSS
+  - rss
   - taxonomy
-  - taxonomyTerm
+  - term
 
+enableEmoji: true
 enableGitInfo: true
-googleAnalytics: UA-144036967-1
+
+services:
+  googleAnalytics:
+    id: G-RWES160M9V
+    # respectDoNotTrack: true ### doesn't work?
 
 pygmentsStyle: manni
 
 params:
-  name: Jared Reisinger
+  author: Jared Reisinger
   description: Software Engineer, Basenji Dad
   favicon: favicon.ico
   # debug: true
@@ -94,7 +104,6 @@ params:
 
   footer:
     enable: true
-    copyright: 2023 Jared Reisinger. All Rights Reserved
     social:
       - label: GitHub
         icon: fa-github

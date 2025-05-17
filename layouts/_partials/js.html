@@ -1,7 +1,7 @@
 {{- /*
   The original template included each script file separately, and had a test
   for IE-specific behavior.  Since it's 2019 and I don't care about IE6-8/9
-  compatibilty, I'm omitting that logic entirely, and simply bundling all the
+  compatibility, I'm omitting that logic entirely, and simply bundling all the
   scripts into one browser-request.  (Yay for Hugo pipelines and asset
   bundling!)
 */ -}}
@@ -16,16 +16,3 @@
 {{- $bundleJs := resources.Concat "js/bundle.js" ($scratch.Get "scripts") | minify | fingerprint -}}
 
 <script type="text/javascript" src="{{ $bundleJs.RelPermalink }}" integrity="{{ $bundleJs.Data.Integrity }}"></script>
-
-{{- template "_internal/google_analytics_async.html" . -}}
-
-{{- /*
-  The original template had an affordance for custom JS after the Google
-  analytics template (but placement likely didn't matter, except for being
-  after main).  We'll include that in the bundle above (eventually) if we care.
-
-  {{ range .Site.Params.custom_js }}
-      <script src="{{ . | relURL }}"></script>
-  {{ end }}
-
-*/ -}}

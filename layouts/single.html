@@ -4,11 +4,11 @@
   */ -}}
   <section id="single">
     <div class="inner">
-      {{- if not .Page.Params.banner }}
+      {{- if not page.Params.banner }}
         <h1>{{ .Title | markdownify }}</h1>
       {{- end }}
       {{- if .Date }}
-        <p style="text-align: right">{{ .Date.Format .Site.Params.dateFormat }}</p>
+        <p style="text-align: right">{{ .Date.Format site.Params.dateFormat }}</p>
       {{- end }}
       {{ .Content }}
     </div>

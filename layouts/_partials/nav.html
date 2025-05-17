@@ -1,30 +1,30 @@
 {{- /* "<!-- Header -->" | safeHTML */ -}}
 <header id="header" class="alt">
-  <a href="{{ .Site.BaseURL }}" class="logo">
-    {{- if .Site.Params.Navigation.logo -}}
-      <img src="{{ .Site.Params.baseURL }}/img/{{ .Site.Params.Navigation.logo }}" alt="" />
+  <a href="{{ site.BaseURL }}" class="logo">
+    {{- if site.Params.Navigation.logo -}}
+      <img src="{{ site.Params.baseURL }}/img/{{ site.Params.Navigation.logo }}" alt="" />
     {{- else -}}
-      <strong>{{ .Site.Params.Navigation.title }}</strong>
-      <span>{{ .Site.Params.Navigation.subtitle }}</span>
+      <strong>{{ site.Params.Navigation.title }}</strong>
+      <span>{{ site.Params.Navigation.subtitle }}</span>
     {{- end -}}
   </a>
   <nav>
-    <a href="#menu">{{ .Site.Params.Navigation.menu }}</a>
+    <a href="#menu">{{ site.Params.Navigation.menu }}</a>
   </nav>
 </header>
 
 {{- /* "<!-- Menu -->" | safeHTML */ -}}
 <nav id="menu">
   <ul class="links">
-    {{- range .Site.Params.Navigation.links }}
+    {{- range site.Params.Navigation.links }}
         <li><a href="{{ .url | relURL}}">{{ .name }}</a></li>
     {{- end }}
   </ul>
   <ul class="actions vertical">
-    {{- range .Site.Params.Navigation.button1 }}
+    {{- range site.Params.Navigation.button1 }}
         <li><a href="{{ .url | relURL}}" class="button special fit">{{ .name }}</a></li>
     {{- end }}
-    {{- range .Site.Params.Navigation.button2 }}
+    {{- range site.Params.Navigation.button2 }}
         <li><a href="{{ .url | relURL}}" class="button fit">{{ .name }}</a></li>
     {{- end }}
   </ul>

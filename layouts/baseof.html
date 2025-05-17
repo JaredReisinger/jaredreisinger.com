@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   <head>
     {{- partial "header.html" . -}}
     {{ block "headerExtra" . }}{{ end }}
   </head>
   <body>
-    {{- .Scratch.SetInMap "debug" "01-title" .Page.Title -}}
-    {{- .Scratch.SetInMap "debug" "02-file" .Page.File.Path -}}
-    {{- .Scratch.SetInMap "debug" "03-dir" .Page.File.Dir -}}
-    {{- .Scratch.SetInMap "debug" "04-isHome" .Page.IsHome -}}
-    {{- .Scratch.SetInMap "debug" "05-isNode" .Page.IsNode -}}
-    {{- .Scratch.SetInMap "debug" "06-isPage" .Page.IsPage -}}
-    {{- .Scratch.SetInMap "debug" "07-kind" .Page.Kind -}}
-    {{- .Scratch.SetInMap "debug" "08-section" .Page.Section -}}
-    {{- .Scratch.SetInMap "debug" "09-resources" .Page.Resources -}}
-    {{- .Scratch.SetInMap "debug" "10-pages" .Page.Pages -}}
-    {{- .Scratch.SetInMap "debug" "11-desc" .Page.Description -}}
-    {{- .Scratch.SetInMap "debug" "12-params" .Page.Params -}}
+    {{- .Scratch.SetInMap "debug" "01-title" page.Title -}}
+    {{- .Scratch.SetInMap "debug" "02-file" page.File.Path -}}
+    {{- .Scratch.SetInMap "debug" "03-dir" page.File.Dir -}}
+    {{- .Scratch.SetInMap "debug" "04-isHome" page.IsHome -}}
+    {{- .Scratch.SetInMap "debug" "05-isNode" page.IsNode -}}
+    {{- .Scratch.SetInMap "debug" "06-isPage" page.IsPage -}}
+    {{- .Scratch.SetInMap "debug" "07-kind" page.Kind -}}
+    {{- .Scratch.SetInMap "debug" "08-section" page.Section -}}
+    {{- .Scratch.SetInMap "debug" "09-resources" page.Resources -}}
+    {{- .Scratch.SetInMap "debug" "10-pages" page.Pages -}}
+    {{- .Scratch.SetInMap "debug" "11-desc" page.Description -}}
+    {{- .Scratch.SetInMap "debug" "12-params" page.Params -}}
     {{- partial "debug.html" (slice . (.Scratch.Get "debug")) -}}
     {{- .Scratch.Delete "debug" -}}
 

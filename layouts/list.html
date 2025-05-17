@@ -8,7 +8,7 @@
   {{- if (not .Params.tiles.enable) }}
     <section class="content">
       <div class="inner">
-        {{- if not .Page.Params.banner }}
+        {{- if not page.Params.banner }}
           <h1>{{ .Title | markdownify }}</h1>
         {{- end }}
 
@@ -39,7 +39,7 @@
                 <header>
                   <h4><a href="{{ .RelPermalink }}" class="link" style="margin-bottom: 0">{{ .Title | markdownify }}</a>{{ if .Description }} <small style="font-size: 84%; font-weight: normal;">— {{ .Description }}</small>{{end}}</h4>
                 </header>
-                <div style="font-size: 84%; font-weight: normal; margin-left: 2em; flex-grow: 1; text-align: right;">{{ .Date.Format .Site.Params.dateFormat }}</div>
+                <div style="font-size: 84%; font-weight: normal; margin-left: 2em; flex-grow: 1; text-align: right;">{{ .Date.Format site.Params.dateFormat }}</div>
             </div>
             </article>
           {{- end }}
@@ -57,7 +57,7 @@
   <section class="spotlights">
     <section>
       <a href="{{ .Permalink }}" class="image">
-          <img src="{{ .Site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
+          <img src="{{ site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
       </a>
       <div class="content">
         <div class="inner">

@@ -1,4 +1,4 @@
 public/
 resources/
-_old/
+_build/
 .hugo_build.lock

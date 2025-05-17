@@ -4,23 +4,27 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-{{- with .Site.Params.description }}
+{{- with site.Params.description }}
   <meta name="description" content="{{ . }}">
 {{- end }}
-{{- with .Site.Params.name }}
+{{- with site.Params.author }}
   <meta name="author" content="{{ . }}">
 {{- end }}
-{{- /* hugo.Generator */ -}}
 
-<title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
+<title>{{ .Title }}{{ if not .IsHome }} &middot; {{ site.Title }}{{ end }}</title>
+
+{{ template "_internal/google_analytics.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
 
 <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}"/>
 
-{{- range .Site.Params.custom_css }}
+{{- range site.Params.custom_css }}
   <link rel="stylesheet" type="text/css" href="{{ . | relURL }}">
 {{- end }}
 
-{{- with .Site.Params.favicon }}
+{{- with site.Params.favicon }}
   {{- /* <link rel="shortcut icon" type="image/x-icon" href="{{ . | relURL }}"> */ -}}
   <link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
 {{- end }}
