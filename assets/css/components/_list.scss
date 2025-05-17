@@ -14,6 +14,11 @@ ol {
   li {
     padding-left: 0.25em;
   }
+
+  // jared: add top-margin on following items...
+  li:not(:nth-of-type(1)) {
+    margin-top: 1em;
+  }
 }
 
 ul {
@@ -23,6 +28,11 @@ ul {
 
   li {
     padding-left: 0.5em;
+  }
+
+  // jared: add top-margin on following items...
+  li:not(:nth-of-type(1)) {
+    margin-top: 1em;
   }
 
   &.alt {

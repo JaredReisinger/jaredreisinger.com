@@ -3,6 +3,8 @@ title: Me
 description: You are on my site, after all
 weight: 10
 # date: 2019-07-09T17:29:11-07:00
+banner:
+  class: style1
 ---
 
 ## A ton of practical development experience...

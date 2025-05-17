@@ -16,30 +16,27 @@ $size: (
 );
 
 // Fonts: original was Source Sans Pro and Courier New (yuck!)
-// Tried Literata, but even the regular (400) weight feels kind of heavy.
-// (https://fonts.googleapis.com/css?family=Literata:400,400i,700,700i)
 
 $font: (
   family: (
-    // "Source Sans Pro",
-    "Titillium Web",
+    "Space Grotesk",
     Helvetica,
     sans-serif
   ),
+
   family-fixed: (
-    // "Courier New",
-    "Source Code Pro",
+    "Space Mono",
     monospace
   ),
-  weight: 300,
-  // weight: 400,
-  // weight-bold: 600,
-  weight-bold: 700,
-  letter-spacing: 0.025em,
-  letter-spacing-alt: 0.25em,
-  // Would be nice to construct the URL from the parts above!
-  // url: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic"
-  url: "https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,700,700i&display=swap"
+
+  // weight: 300,
+  weight: 400,
+  weight-bold: 600,
+  // weight-bold: 700,
+
+  // letter-spacing: 0.025em, // zero if not set
+  // letter-spacing-alt: 0.25em, // too wide!
+  letter-spacing-alt: 0.15em,
 );
 
 // Palette.

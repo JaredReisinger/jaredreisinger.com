@@ -8,7 +8,7 @@ date: 2020-12-02T13:44:05-07:00
 # tileAttrib: Jordan Harrison
 
 banner:
-  enabled: true
+  image: tile.jpg
 # imageRef: <span>Photo by <a href="https://unsplash.com/@jordanharrison?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jordan Harrison</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 ---
 

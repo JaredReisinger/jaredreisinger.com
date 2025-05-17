@@ -17,7 +17,7 @@
   background-size: cover;
   border-bottom: 0 !important;
   cursor: default;
-  height: 60vh;
+  height: 20vh;
   margin-bottom: -3.25em;
   max-height: 32em;
   min-height: 22em;
@@ -26,7 +26,7 @@
 
   &:after {
     @include vendor("transition", "opacity #{_duration(banner)} ease");
-    @include vendor("transition-delay", "0.75s");
+    @include vendor("transition-delay", "0.25s");
     @include vendor("pointer-events", "none");
     background-color: _palette(bg);
     content: "";

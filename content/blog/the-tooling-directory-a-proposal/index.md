@@ -7,7 +7,7 @@ date: 2020-08-25T13:16:00-07:00
 # tileAttrib: Ashim D’Silva
 
 banner:
-  enabled: true
+  image: tile.jpg
 ---
 
 Take a peek in the root directory of a modern JavaScript project and you'll likely see more than a few config files used entirely for tooling for the project. One of mine has the following:

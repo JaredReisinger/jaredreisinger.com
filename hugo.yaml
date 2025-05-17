@@ -16,18 +16,22 @@ disableKinds:
 enableEmoji: true
 enableGitInfo: true
 
+# module:
+#   imports:
+#     - path: github.com/future-wd/hugo-responsive-images
+
 services:
   googleAnalytics:
     id: G-RWES160M9V
     # respectDoNotTrack: true ### doesn't work?
 
-pygmentsStyle: manni
+# pygmentsStyle: manni
 
 params:
   author: Jared Reisinger
   description: Software Engineer, Basenji Dad
   favicon: favicon.ico
-  # debug: true
+  debug: true
 
   dateFormat: January 2, 2006
 

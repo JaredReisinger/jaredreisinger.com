@@ -3,9 +3,10 @@
   because that was just confusing, and wrong.
 */ -}}
 
-{{- if .Page.Params.banner -}}
-  {{- $banner := .Page.Params.banner -}}
-  {{- $image := .Resources.GetMatch "banner.jpg" -}}
+{{- $banner := .Page.Params.banner -}}
+
+{{- if and $banner (not (eq $banner.enabled false)) -}}
+  {{- $image := default (.Resources.Get "banner.jpg") (.Resources.Get $banner.image) -}}
 
   <section id="banner" {{ with $banner.class }}class="{{ . }}"{{end}} {{ with $image }}data-image="{{ (.Resize "x600 q80").RelPermalink }}"{{end}}>
     <div class="inner">

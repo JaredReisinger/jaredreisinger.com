@@ -4,7 +4,9 @@ description: Summing up one's life in a page or so
 weight: 200 # end of list, but before basenjis
 # weight: 15 # beginning of list, after "me"
 # date: 2019-07-09T17:29:31-07:00
-
+banner:
+  image: tile.jpg
+  class: style6
 # image: https://unsplash.com/photos/MldQeWmF2_g by Christa Dodoo
 ---
 

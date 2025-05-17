@@ -3,9 +3,11 @@ title: Basenjis
 description: Four-legged maniacs
 weight: 1000
 # date: 2019-07-10T17:55:35-07:00
+banner:
+  class: style1
 ---
 
-I’m the proud “father” of four Basenjis… or of thirteen if you also include the puppies I helped to raise and that now live across the United States. For more about that aspect of things, see [Ture Hounds](https://turehounds.com).
+I’m the proud “father” of three Basenjis… or of eighteen if you also include the puppies I helped to raise and that now live across the United States. For more about that aspect of things, see [Ture Hounds](https://turehounds.com).
 
 As a bit of crossover between dogs and technology, you can also take a look at:
 

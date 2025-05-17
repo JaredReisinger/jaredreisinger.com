@@ -2,9 +2,12 @@
   {{- /*
     If the banner was used, we don't need to show the title... but if not...
   */ -}}
+
+  {{- $banner := .Page.Params.banner -}}
+
   <section id="single">
     <div class="inner">
-      {{- if not page.Params.banner }}
+      {{- if or (not $banner) (eq $banner.enabled false) }}
         <h1>{{ .Title | markdownify }}</h1>
       {{- end }}
       {{- if .Date }}
