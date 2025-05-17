@@ -8,7 +8,7 @@ weight: 200 # end of list, but before basenjis
 # image: https://unsplash.com/photos/MldQeWmF2_g by Christa Dodoo
 ---
 
-## Principal Software Engineer / Architect
+## Architect / Principal Software Engineer
 
 **Architects rock-solid platforms • Designs and implements best-of-breed solutions • Effectively communicates with both technical and non-technical peers and partners • Mentors junior developers regarding best practices and professional software development**
 
@@ -16,16 +16,27 @@ A professional software engineer with proven experience shipping hundreds of rel
 
 ## Languages and Skills
 
-Javascript/Typescript (full-stack), including React/Redux/Relay and ESM; MongoDB/Mongoose NoSQL; Go-lang; Python; C#/.NET; platform architecture; CI/CD pipelines; Extensibility; Asynchronous Programming; UI/UX development; WPF/XAML; MEF; Reactive Extensions; MVVM; ASP.NET; MVC; MSBuild; PowerShell; C++; Java; SQL; PHP; Perl; Bash
+Javascript/Typescript (full-stack), including React/Redux/Relay and ESM; MongoDB/Mongoose NoSQL; Go; Python; C#/.NET; platform architecture; CI/CD pipelines; Extensibility; Asynchronous Programming; UI/UX development; WPF/XAML; MEF; Reactive Extensions; MVVM; ASP.NET; MVC; MSBuild; PowerShell; C++; Java; SQL; PHP; Perl; Bash
 
 ## Experience
 
 {{<resume-position
+  "Architect"
+  "Zynga, Inc."
+  "September 2023–present">}}
+
+Engineering lead for the team responsible for managing source control, CI/CD, and artifact tracking for hundreds of games and internal tools.
+
+Proposed and drove solutions for myriad engineering best practices: engineering reliability, CI/CD pipelines, containerization, and automation.
+
+Served as technical point-of-contact for multiple third-party vendors.
+
+{{<resume-position
   "Principal Software Engineer"
   "Drizly, LLC."
-  "March 2022–present">}}
+  "March 2022–May 2023">}}
 
-Proposed and/or drove solutions for myriad engineering best practices: engineering reliability, build and deployment pipeline, and testing code coverage.
+Proposed and drove solutions for myriad engineering best practices: engineering reliability, build and deployment pipeline, and testing code coverage.
 
 Developed migration plan for migrating legacy VMs (AWS EC2) to a containerized solution.
 
