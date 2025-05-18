@@ -18,7 +18,12 @@ enableGitInfo: true
 
 # module:
 #   imports:
-#     - path: github.com/future-wd/hugo-responsive-images
+#     # - path: shortcodes
+      # sadly, github.com/future-wd/hugo-responsive-images does not use _-prefixed partials naming, and hugo can't render it correctly
+#     # - path: github.com/future-wd/hugo-responsive-images
+
+# theme:
+#   - shortcodes
 
 services:
   googleAnalytics:
@@ -31,7 +36,7 @@ params:
   author: Jared Reisinger
   description: Software Engineer, Basenji Dad
   favicon: favicon.ico
-  debug: true
+  # debug: true
 
   dateFormat: January 2, 2006
 
