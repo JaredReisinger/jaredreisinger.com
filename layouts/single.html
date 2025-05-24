@@ -7,8 +7,7 @@
 
   {{- $banner := .Page.Params.banner -}}
 
-  <section id="single" class="mt-12 mx-auto prose max-w-[80ch] xl:prose-lg prose-zinc">
-    <div class="inner">
+  <section class="mt-6 md:mt-12 mx-auto px-6 prose max-w-[80ch] prose-sm md:prose-base xl:prose-lg prose-zinc">
       {{- if or (not $banner) (eq $banner.enabled false) }}
         <h1>{{ .Title | markdownify }}</h1>
       {{- end }}
@@ -16,6 +15,5 @@
         <p style="text-align: right">{{ .Date.Format site.Params.dateFormat }}</p>
       {{- end }}
       {{ .Content }}
-    </div>
   </section>
 {{ end }}
