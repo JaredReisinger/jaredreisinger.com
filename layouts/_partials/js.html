@@ -14,5 +14,6 @@
 {{- $scratch.Add "scripts" (slice (resources.Get "js/main.js")) -}}
 
 {{- $bundleJs := resources.Concat "js/bundle.js" ($scratch.Get "scripts") | minify | fingerprint -}}
-
+{{- /*
 <script type="text/javascript" src="{{ $bundleJs.RelPermalink }}" integrity="{{ $bundleJs.Data.Integrity }}"></script>
+*/ -}}

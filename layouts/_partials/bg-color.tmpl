@@ -1,0 +1,14 @@
+{{/* figure out order in parent... */}}
+{{ $curPage := . }}
+{{ $index := -1 }}
+{{ range $i, $p := (.Parent | default site).Sections.ByWeight }}
+  {{ if $curPage.Eq $p }}
+    {{ $index = $i }}
+    {{ break }}
+  {{ end }}
+{{ end }}
+{{ $bg := "bg-white" }}
+{{ if gt $index -1 }}
+  {{ $bg = index site.Params.colors (math.Mod $index (site.Params.colors | len)) }}
+{{ end }}
+{{ return $bg }}

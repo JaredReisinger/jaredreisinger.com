@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@source "hugo_stats.json";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* lots of shadows to make it stronger */
+  --text-shadow-tile: 0 0 0.2em white, 0 0 1em white, 0 0 1em white, 0 0 1em white;
+}
+
+html {
+  /* set a larger base font size... can this be responsive? */
+  font-size: 1.2rem;
+}
+
+/* all links have a eased color transition... */
+a:not(.tile) {
+  @apply transition-colors ease-in-out hover:text-cyan-500;
+
+  & * {
+    @apply transition-colors ease-in-out hover:text-cyan-500;
+  }
+}
+
+/* #header + * {
+  @apply pt-24;
+} */

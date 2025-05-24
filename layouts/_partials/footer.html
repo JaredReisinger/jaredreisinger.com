@@ -1,16 +1,21 @@
-{{- /* "<!-- Footer -->" | safeHTML */ -}}
-<footer id="footer">
-  <div class="inner">
-    <ul class="icons">
-      {{- range site.Params.Footer.social }}
-        <li><a href="{{ .url | safeHTML }}" class="icon alt brand {{ .icon }}" target="_blank"><span class="label">{{ .label }}</span></a></li>
-      {{- end }}
-    </ul>
-    <ul class="copyright">
-      <li>&copy; {{ time.Now | time.Format "2006" }} {{ site.Params.Author }}. All Rights Reserved.</li>
-      {{- range site.Params.Footer.quicklinks}}
-        <li>{{ .text }} <a href="{{ .url | safeHTML }}">{{ .alt }}</a></li>
-      {{- end }}
-    </ul>
-  </div>
+{{- /* footer */ -}}
+<footer class="py-12 px-4 flex flex-col">
+  {{- /* social media icons */ -}}
+  <ul class="flex gap-4">
+    {{ range site.Params.footer.social }}
+      <li><a href="{{ .url | safeHTML }}" title="{{ .label }}" target="_blank"><i class="fa-brands {{ .icon }} fa-fw fa-2x"></i></a></li>
+    {{ end }}
+  </ul>
+
+  {{- /* copyright and quick links */ -}}
+  <ul class="mt-4 text-sm text-zinc-400 flex flex-wrap gap-x-4">
+    <li>
+      &copy; {{ time.Now | time.Format "2006" }} {{ site.Params.author }}. All
+      Rights Reserved.
+    </li>
+
+    {{ range site.Params.footer.quicklinks }}
+      <li>{{ .text }} <a href="{{ .url | safeHTML }}">{{ .alt }}</a></li>
+    {{ end }}
+  </ul>
 </footer>

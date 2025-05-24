@@ -1,8 +1,11 @@
 {{ define "main" }}
 
+{{ partial "banner.html" . }}
+
+<div>LIST PAGE</div>
+
   {{/* the list content is surfaced via the banner, so nothing happens here */}}
   {{ "" | safeHTML }}{{/* a non-null no-op! */}}
-
   {{- /* TODO: lift this to use tile or two? ... */ -}}
   {{- /* this is uglier than tiles, so we no longer use it. */ -}}
   {{- if (not .Params.tiles.enable) }}

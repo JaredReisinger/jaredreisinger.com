@@ -1,0 +1,16 @@
+{{- $context := index . 0 -}}
+{{- $img := $context.Resources.Get (index . 1 ) -}}
+
+
+<img
+  src="{{ ($img.Resize "x500 q75").RelPermalink }}"
+  alt=""
+  sizes="auto"
+  srcset="
+    {{- "" -}}  {{ ($img.Resize "x250 q75").RelPermalink }} 250w
+    {{- "" -}}, {{ ($img.Resize "x500 q75").RelPermalink }} 500w
+    {{- "" -}}, {{ ($img.Resize "x1000 q75").RelPermalink }} 1000w
+    {{- "" -}}, {{ ($img.Resize "x2000 q75").RelPermalink }} 2000w
+    {{- "" -}}
+  "
+/>

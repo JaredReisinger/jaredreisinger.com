@@ -1,0 +1,30 @@
+{
+  "name": "jaredreisinger.com",
+  "version": "1.0.0",
+  "description": "npm/js resources for jaredreisinger.com hugo site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredReisinger/jaredreisinger.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JaredReisinger/jaredreisinger.com/issues"
+  },
+  "homepage": "https://github.com/JaredReisinger/jaredreisinger.com#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "prettier": "^3.5.3",
+    "prettier-plugin-go-template": "^0.0.15",
+    "tailwindcss": "^4.1.7"
+  }
+}
