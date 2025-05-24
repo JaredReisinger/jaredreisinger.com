@@ -1,3 +1,4 @@
-<div style="display: flex">
+{{ $class := .Get "class" }}
+<div class="flex {{ $class }}">
   {{ .Inner }}
 </div>

@@ -1,79 +1,64 @@
 {{ define "main" }}
+  {{ partial "banner.html" . }}
 
-{{ partial "banner.html" . }}
-
-<div>LIST PAGE</div>
-
-  {{/* the list content is surfaced via the banner, so nothing happens here */}}
-  {{ "" | safeHTML }}{{/* a non-null no-op! */}}
+  {{- /* the list content is surfaced via the banner, so nothing happens here */ -}}
+  {{ "" | safeHTML }}{{- /* a non-null no-op! */ -}}
   {{- /* TODO: lift this to use tile or two? ... */ -}}
   {{- /* this is uglier than tiles, so we no longer use it. */ -}}
-  {{- if (not .Params.tiles.enable) }}
+  {{ if (not .Params.tiles.enable) }}
     <section class="content">
       <div class="inner">
-        {{- $banner := .Page.Params.banner -}}
+        {{ $banner := .Page.Params.banner }}
 
-        {{- if or (not $banner) (eq $banner.enabled false) }}
+        {{ if or (not $banner) (eq $banner.enabled false) }}
           <h1>{{ .Title | markdownify }}</h1>
-        {{- end }}
+        {{ end }}
 
-        {{ .Content }}
 
-        <section>
-          {{- range .Pages }}
-            <article style="position: relative; display: flex; align-items: center;">
-              {{- $tile := .Resources.Get "tile.jpg" -}}
-              {{- $tileW := .Resources.Get "tile.webp" -}}
-              {{- .Scratch.SetInMap "debug" "01-page" . -}}
-              {{- .Scratch.SetInMap "debug" "02-kind" .Kind -}}
-              {{- .Scratch.SetInMap "debug" "02-date" .Date -}}
-              {{- .Scratch.SetInMap "debug" "03-desc" .Params.description -}}
-              {{- .Scratch.SetInMap "debug" "04-tile" $tile -}}
-              {{- .Scratch.SetInMap "debug" "04-tileW" $tileW -}}
-              {{- /* .Scratch.SetInMap "debug" "10-params" .Params */ -}}
-              {{- .Scratch.SetInMap "debug" "11-resources" .Resources -}}
-              {{- partial "debug.html" (slice . (.Scratch.Get "debug")) -}}
-              {{- .Scratch.Delete "debug" -}}
-      
-              {{- if $tile }}
-                <span class="image" style="margin-right: 1em;">
-                  <img src="{{ ($tile.Resize "x200 q75").RelPermalink }}" alt="" />
-                </span>
-              {{- end }}
-              <div style="flex-grow: 1; display: flex; align-items: baseline;">
-                <header>
-                  <h4><a href="{{ .RelPermalink }}" class="link" style="margin-bottom: 0">{{ .Title | markdownify }}</a>{{ if .Description }} <small style="font-size: 84%; font-weight: normal;">— {{ .Description }}</small>{{end}}</h4>
-                </header>
-                <div style="font-size: 84%; font-weight: normal; margin-left: 2em; flex-grow: 1; text-align: right;">{{ .Date.Format site.Params.dateFormat }}</div>
-            </div>
-            </article>
-          {{- end }}
-        </section>
-    </div>
-    </section>
-  {{- end }}
-
-{{ end }}
-
-{{- /*
-  The list format used to use the "spotlight" section class... that could become
-  it's own "requested" layout, like "tiles" are.
-
-  <section class="spotlights">
-    <section>
-      <a href="{{ .Permalink }}" class="image">
-          <img src="{{ site.Params.baseURL }}/img/{{ .Section }}/{{ .Params.image }}" alt="" data-position="center center" />
-      </a>
-      <div class="content">
-        <div class="inner">
-          <header class="major">
-            <h3>{{ .Title }}</h3>
-          </header>
-          <p>{{ .Description }}</p>
-          <ul class="actions">
-            <li><a href="{{ .Permalink }}" class="button">Read more</a></li>
-          </ul>
+        <div class="mt-12 mx-auto prose max-w-[80ch] xl:prose-lg prose-zinc">
+          {{ .Content }}
         </div>
+
+        <section class="mx-auto prose max-w-[80ch] xl:prose-lg prose-zinc">
+          {{ range $i, $p := .Pages }}
+            {{ $tile := $p.Resources.Get "tile.jpg" }}
+            {{ $tileW := $p.Resources.Get "tile.webp" }}
+            {{ .Scratch.SetInMap "debug" "01-page" $p }}
+            {{ .Scratch.SetInMap "debug" "02-kind" $p.Kind }}
+            {{ .Scratch.SetInMap "debug" "02-date" $p.Date }}
+            {{ .Scratch.SetInMap "debug" "03-desc" $p.Params.description }}
+            {{ .Scratch.SetInMap "debug" "04-tile" $tile }}
+            {{ .Scratch.SetInMap "debug" "04-tileW" $tileW }}
+            {{- /* .Scratch.SetInMap "debug" "10-params" .Params */ -}}
+            {{ .Scratch.SetInMap "debug" "11-resources" $p.Resources }}
+            {{ partial "debug.html" (slice . (.Scratch.Get "debug")) }}
+            {{ .Scratch.Delete "debug" }}
+
+
+            <article
+              class="mt-12 not-prose bg-cover bg-center bg-[url({{ ($tile.Resize "x800 q80").RelPermalink }})]"
+            >
+              <a
+                href="{{ $p.RelPermalink }}"
+                class="tile block w-full text-zinc-900 {{ partial "bg-color.tmpl" $p }}/75 hover:bg-white/40 hover:text-black hover:text-shadow-tile transition-all duration-750 backdrop-blur-none py-24 px-18"
+              >
+                <h3
+                  class="text-3xl font-semibold text-zinc-900 pb-4 border-b-2 border-zinc-900 mb-4"
+                >
+                  {{ $p.Title | markdownify }}
+                </h3>
+                <div
+                  class="text-xs uppercase tracking-wider font-semibold font-zinc-800 flex justify-between"
+                >
+                  <p>{{ $p.Description | markdownify }}</p>
+                  <p>{{ $p.Date.Format site.Params.dateFormat }}</p>
+                </div>
+              </a>
+            </article>
+          {{ end }}
+        </section>
       </div>
     </section>
-*/ -}}
+  {{ end }}
+
+{{ end }}

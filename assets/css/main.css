@@ -27,6 +27,16 @@ a:not(.tile) {
   }
 }
 
+/* remove the weird backticks around code... */
+code {
+  &::before {
+    content: '';
+  }
+  &::after {
+    content: '';
+  }
+}
+
 /* #header + * {
   @apply pt-24;
 } */
