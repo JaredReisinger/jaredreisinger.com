@@ -45,12 +45,12 @@ params:
 
   # TODO: have a series of accent colors to cycle through?
   colors:
-    - bg-cyan-200
-    - bg-purple-200
-    - bg-red-200
-    - bg-orange-200
-    - bg-blue-200
-    - bg-green-200
+    - bg-[var(--color-accent-1)] # bg-cyan-200
+    - bg-[var(--color-accent-2)] # purple-200
+    - bg-[var(--color-accent-3)] # red-200
+    - bg-[var(--color-accent-4)] # orange-200
+    - bg-[var(--color-accent-5)] # blue-200
+    - bg-[var(--color-accent-6)] # green-200
 
   # navigation:
   #   title: Jared Reisinger
