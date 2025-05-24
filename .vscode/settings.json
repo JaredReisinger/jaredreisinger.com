@@ -1,15 +1,24 @@
 {
     "cSpell.words": [
         "automatable",
+        "cachebusters",
         "Drizly",
         "Hazen",
         "markdownify",
+        "middot",
         "MSNBC",
         "MVVM",
+        "notwatching",
+        "opengraph",
+        "quicklinks",
         "Renton",
         "résumé",
         "signup",
         "skinnable",
+        "stylesheet",
         "Zynga"
-    ]
+    ],
+    "files.associations": {
+        "*.html": "go-template"
+    }
 }

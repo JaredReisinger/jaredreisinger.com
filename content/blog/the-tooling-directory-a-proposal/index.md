@@ -37,7 +37,7 @@ This root directory overload has such an impact that many projects put their sou
 
 I think we can do better. Just as "all of the actual source code" ends up in `src/`, and "all of the installed dependency packages" end up in `node_modules/`, we can push for "all of the tooling configuration" to end up in `.tooling/`. This alone would change my example project:
 
-{{<side-by-side>}}
+{{<side-by-side class="justify-center flex-wrap gap-8">}}
 
 {{%side-by-side-item%}}
 ##### from:
@@ -91,9 +91,7 @@ README.md
 package-lock.json
 package.json
 ```
-{{%/side-by-side-item%}}
 
-{{%side-by-side-item%}}
 ##### or even:
 ```
 .git/
@@ -114,7 +112,7 @@ package.json
 
 {{</side-by-side>}}
 
-{{<side-by-side>}}
+{{<side-by-side class="gap-8">}}
 
 {{%side-by-side-item%}}
 What a difference this makes! Not only does it de-clutter the root directory, but it helps corral the odd standouts, like `jest.config.js` and `styleguide.config.js`, that don't start with a leading period and therefore don't sort alongside the other period-prefixed tooling config files.  The third "or even" example also moves two non-config tooling-related directories, for an even cleaner root.
@@ -124,8 +122,8 @@ What a difference this makes! Not only does it de-clutter the root directory, bu
 It's important and useful to not conflate "files needed for tools used by the project" with "configuration files for the project itself". The project config files may well be packaged with or deploy with the project, but the tooling configuration files almost certainly won't. Further, it makes it much more apparent where to look when, for example, one needs to adjust the ESLint settings: the tooling needs to change, and the necessary file is in `.tooling/`. For the more philosophical among you, naming the directory `.tooling/` is a matter of "name it for its _purpose_ (semantics), not for what it _is_ (syntax)".  It is less important that the files within are config files, and more important that the files within are for tooling. This also has the advantage that it becomes reasonable to put _non_-config tooling-related files here, such as in the "or even" case of the above example, or Storybook's `preview.js`, or project-local tooling scripts, and so on.
 {{%/side-by-side-item%}}
 
-{{<side-by-side-item>}}
-{{<figure src="organized.jpg" width="300" attr="Photo by Edgar Chaparro" attrlink="https://unsplash.com/photos/r6mBXuHnxBk">}}
+{{<side-by-side-item class="min-w-1/3">}}
+{{<figure src="organized.jpg" width="600" attr="Photo by Edgar Chaparro" attrlink="https://unsplash.com/photos/r6mBXuHnxBk">}}
 {{</side-by-side-item>}}
 
 {{</side-by-side>}}

@@ -1,0 +1,51 @@
+{{- /* entire head block */ -}}
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+
+  {{ with site.Params.description }}
+    <meta name="description" content="{{ . }}" />
+  {{ end }}
+
+  {{ with site.Params.author }}
+    <meta name="author" content="{{ . }}" />
+  {{ end }}
+
+
+  <title>
+    {{ .Title }}{{ if not .IsHome }}&middot; {{ site.Title }}{{ end }}
+  </title>
+
+  {{ with site.Params.favicon }}
+    <link rel="icon" type="image/x-icon" href="{{ . | relURL }}" />
+  {{ end }}
+
+  {{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/schema.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+
+  {{- /* it would be nice to generate Google Font link from CSS! */ -}}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  {{- /* new Tailwind CSS! */ -}}
+  {{ partialCached "css.html" . }}
+
+  {{- /* TODO: take FontAwesome kit ID or URL as a parameter */ -}}
+  <script
+    src="https://kit.fontawesome.com/f8901c070d.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+
+  {{ block "headerExtra" . }}{{ end }}
+</head>

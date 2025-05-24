@@ -1,7 +1,6 @@
 baseURL: http://jaredreisinger.com/
 languageCode: en-us
 title: Jared Reisinger
-# author: Jared Reisinger ### not really a setting! see site.params.author
 
 # now generated dynamically from current time and site.Params.Author
 # copyright: 2025 Jared Reisinger. All Rights Reserved.
@@ -40,35 +39,23 @@ params:
 
   dateFormat: January 2, 2006
 
-  navigation:
+  header:
     title: Jared Reisinger
     subtitle: Software Engineer, Basenji Dad
-    # menu: Menu # a label for the hamburger menu, if desired
 
-    links:
-      - name: Home
-        url: /
+  # TODO: have a series of accent colors to cycle through?
+  colors:
+    - bg-[var(--color-accent-1)] # bg-cyan-200
+    - bg-[var(--color-accent-2)] # purple-200
+    - bg-[var(--color-accent-3)] # red-200
+    - bg-[var(--color-accent-4)] # orange-200
+    - bg-[var(--color-accent-5)] # blue-200
+    - bg-[var(--color-accent-6)] # green-200
 
-      - name: Me
-        url: /me/
-
-      - name: Engineering
-        url: /engineering/
-
-      - name: Design
-        url: /design/
-
-      - name: Open Source
-        url: /open-source/
-
-      - name: Blog
-        url: /blog/
-
-      - name: Résumé
-        url: /resume/
-
-      - name: Basenjis
-        url: /basenjis/
+  # navigation:
+  #   title: Jared Reisinger
+  #   subtitle: Software Engineer, Basenji Dad
+  #   # menu: Menu # a label for the hamburger menu, if desired
 
   footer:
     enable: true
@@ -100,11 +87,29 @@ params:
       # - label: Instagram
       #   icon: fa-instagram
       #   url: https://www.instagram.com/jared_reisinger/
+
     # quicklinks:
     #   - text: label
     #     alt: linked-text
     #     url: /404
-    #
+    
     #   - text: "prefix:"
     #     alt: try me
     #     url: /404
+
+# build hooks (cache busting for tailwind, etc.)
+build:
+  buildStats:
+    enable: true
+  cachebusters:
+  - source: assets/notwatching/hugo_stats\.json
+    target: css
+  # - source: (postcss|tailwind)\.config\.js
+  #   target: css
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - disableWatch: true
+      source: hugo_stats.json
+      target: assets/notwatching/hugo_stats.json

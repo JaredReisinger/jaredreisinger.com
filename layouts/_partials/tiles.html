@@ -1,32 +1,35 @@
 {{- /*
   The "tiles" section is used only when a page explicitly enables it.
-*/ -}}
+  */
+-}}
 
 {{- if (or .Params.tiles.enable) }}
-  <section id="one" class="tiles">
-    {{- range .Pages }}
-      <article>
-        {{- $tile := .Resources.Get "tile.jpg" -}}
-        {{- $tileW := .Resources.Get "tile.webp" -}}
-        {{- .Scratch.SetInMap "debug" "01-page" . -}}
-        {{- .Scratch.SetInMap "debug" "02-kind" .Kind -}}
-        {{- .Scratch.SetInMap "debug" "03-desc" .Params.description -}}
-        {{- .Scratch.SetInMap "debug" "04-tile" $tile -}}
-        {{- .Scratch.SetInMap "debug" "04-tileW" $tileW -}}
-        {{- /* .Scratch.SetInMap "debug" "10-params" .Params */ -}}
-        {{- .Scratch.SetInMap "debug" "11-resources" .Resources -}}
-        {{- partial "debug.html" (slice . (.Scratch.Get "debug")) -}}
-        {{- .Scratch.Delete "debug" -}}
-        {{- if $tile }}
-          <span class="image">
-            <img src="{{ ($tile.Resize "x500 q75").RelPermalink }}" alt="" />
-          </span>
-        {{- end }}
-        <header class="major">
-          <h3><a href="{{ .RelPermalink }}" class="link">{{ .Title | markdownify }}</a></h3>
-          <p>{{ .Description | markdownify }}</p>
-        </header>
+
+  <section class="flex flex-wrap justify-stretch mb-6 lg:mb-12">
+    {{ range $i, $p := .Pages }}
+      {{ $tile := $p.Resources.Get "tile.jpg" }}
+      {{ $stretch := eq (math.Mod $i 4) 1 2 }}
+      <article
+        class="w-full sm:w-1/2 md:w-2/5 {{ if $stretch }}
+          md:flex-grow
+        {{ end }} bg-cover bg-center bg-[url({{ ($tile.Resize "x800 q80").RelPermalink }})]"
+      >
+        <a
+          href="{{ $p.RelPermalink }}"
+          class="tile block w-full h-full text-zinc-900 {{ partial "bg-color.tmpl" $p }}/85 hover:bg-white/40 hover:text-black hover:text-shadow-tile transition-all duration-750 backdrop-blur-none py-12 px-9 md:py-24 md:px-18"
+        >
+          <h3
+            class="text-xl md:text-3xl font-semibold text-zinc-900 pb-4 border-b-[1.5px] md:border-b-2 border-zinc-900 mb-4"
+          >
+            {{ $p.Title | markdownify }}
+          </h3>
+          <p
+            class="text-[0.5rem] md:text-xs uppercase tracking-wider font-semibold font-zinc-800"
+          >
+            {{ $p.Description | markdownify }}
+          </p>
+        </a>
       </article>
-    {{- end }}
+    {{ end }}
   </section>
-{{- end }}
+{{ end }}

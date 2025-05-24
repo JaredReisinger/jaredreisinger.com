@@ -1,27 +1,31 @@
 {{- /*
   I've reworked the banner to prevent it from showing "content" by default,
   because that was just confusing, and wrong.
-*/ -}}
+  */
+-}}
 
 {{- $banner := .Page.Params.banner -}}
 
 {{- if and $banner (not (eq $banner.enabled false)) -}}
   {{- $image := default (.Resources.Get "banner.jpg") (.Resources.Get $banner.image) -}}
 
-  <section id="banner" {{ with $banner.class }}class="{{ . }}"{{end}} {{ with $image }}data-image="{{ (.Resize "x600 q80").RelPermalink }}"{{end}}>
-    <div class="inner">
-      <header class="major">
-        <h1>{{ $banner.title | default .Title | markdownify }}</h1>
-      </header>
-      <div class="content">
-        <div>{{ $banner.subtitle | default .Description | markdownify }}</div>
-        {{ with $banner.buttonText }}
-          <ul class="actions">
-            <li><a href="#one" class="button next scrolly">{{ . }}</a></li>
-          </ul>
-        {{- end }}
+  {{/* create a large area with background image.. */}}
+  <div
+    class="bg-cover bg-top bg-[url({{ ($image.Resize "x1200 q80").RelPermalink }})]"
+  >
+    <div
+      class="min-h-48 md:min-h-96 {{ partial "bg-color.tmpl" . }}/75 backdrop-blur-none p-12 md:p-24 text-shadow-tile"
+    >
+      <h1
+        class="text-3xl md:text-6xl font-bold text-zinc-900 pb-6 md:pb-12 border-b-2 border-zinc-900 mt-3 md:mt-6 mb-6 md:mb-12"
+      >
+        {{ $banner.title | default .Title | markdownify }}
+      </h1>
+      <div
+        class="text-xs md:text-sm font-semibold uppercase tracking-widest text-zinc-800 flex flex-col gap-2 md:gap-4"
+      >
+        {{ $banner.subtitle | default .Description | markdownify }}
       </div>
     </div>
-  </section>
-{{- end -}}
-
+  </div>
+{{ end }}

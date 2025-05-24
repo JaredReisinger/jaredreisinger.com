@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-  <head>
-    {{- partial "header.html" . -}}
-    {{ block "headerExtra" . }}{{ end }}
-  </head>
+  {{ partial "html-head.html" . }}
   <body>
     {{- .Scratch.SetInMap "debug" "01-title" page.Title -}}
     {{- .Scratch.SetInMap "debug" "02-file" page.File.Path -}}
@@ -21,22 +18,21 @@
     {{- .Scratch.Delete "debug" -}}
 
     {{ block "body" . }}
-      <div id="wrapper">
         {{- partial "nav.html" . -}}
         {{- /*
           The original Forty markup was highly inconsistent about when the
           "main" div was used.  This is just a close approximation.
         */ -}}
-        <div id="main">
+        {{/* <div id="main"> */}}
+          {{- /*
     			{{- partial "banner.html" . -}}
           {{- partial "tiles.html" . -}}
+          */ -}}
           {{ block "main" .}}
             {{ .Content }}
           {{ end }}
-        </div>
+        {{/* </div> */}}
         {{- partial "footer.html" . -}}
-      </div>
-    {{ end }}
-    {{- partial "js.html" . -}}
+     {{ end }}
   <body>
 </html>

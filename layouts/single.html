@@ -1,12 +1,13 @@
 {{ define "main" }}
+  {{ partial "banner.html" . }}
+
   {{- /*
     If the banner was used, we don't need to show the title... but if not...
   */ -}}
 
   {{- $banner := .Page.Params.banner -}}
 
-  <section id="single">
-    <div class="inner">
+  <section class="mt-6 md:mt-12 mx-auto px-6 prose max-w-[80ch] prose-sm md:prose-base xl:prose-lg prose-zinc">
       {{- if or (not $banner) (eq $banner.enabled false) }}
         <h1>{{ .Title | markdownify }}</h1>
       {{- end }}
@@ -14,6 +15,5 @@
         <p style="text-align: right">{{ .Date.Format site.Params.dateFormat }}</p>
       {{- end }}
       {{ .Content }}
-    </div>
   </section>
 {{ end }}

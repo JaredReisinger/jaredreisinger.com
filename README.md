@@ -4,32 +4,29 @@
 
 Content and layout for [jaredreisinger.com](https://jaredreisinger.com) website. Uses Netlify's GitHub integration to automatically deploy this Hugo-driven site _for free!_
 
+This site uses:
 
-## Notes to self...
+- [Hugo](https://gohugo.io) for processing content into static HTML
+- [Node.js/npm](https://nodejs.org) to manage TailwindCSS and other development tooling
+- [TailwindCSS](https://tailwindcss.com/) utility CSS for styling
+- [Alpine.js](https://alpinejs.dev/) for very limited interactivity (the mobile navigation menu)
 
-### TODO:
+## Local development
 
-- [ ] See if I can get Hugo to process images so that hi-res original source can be the only thing checked in. I _think_ I might have been using `guetzli` manually because of how slow it was to process... but a responsize image solution (which creates much smaller images) might make it fast enough to use during the build. Eleventy can do this, so I bet Hugo can, too.
+Assuming that [`hugo`](https://gohugo.io) and [Node.js/`npm`](https://nodejs.org) is installed, and `npm install` has been run to pull down Node packages, `hugo server` will launch a development server that watches for changes.
 
-- [ ] Look into new Tailwind CSS integration with Hugo. (See next item as well.)
+## Concepts
 
-- [ ] Finally try to understand the CSS/JS from the original template. I have a feeling it's pretty old-school and there may be easier/smaller things that could be used like [Alpine.js](https://alpinejs.dev/)
+> [!NOTE]
+>
+> Image handling needs to be revisited. The original template used Javascript to manage images, which prevented newer responsive-imaging structure from being used. (Likely because the pre-Hugo implementation already did this, and the conversion didn't make use of Hugo's asset pipelines.) As of [May 2025](https://github.com/JaredReisinger/jaredreisinger.com/pull/2), that Javascript is gone.
 
-
-### Local development
-
-Assuming that [`hugo`](https://gohugo.io) is installed, `hugo server` will launch a development server tht watches for changes.
-
-### Images
-
-Images are minimized via `guetzli`, and WebP variants created with `cwebp`:
+Images are (were!!) minimized via `guetzli`, and WebP variants created with `cwebp`:~~
 
 ```shell
 some-page/ $ guetzli --verbose original.jpg tile.jpg
 some-page/ $ cwebp -preset photo -v -mt original.jpg -o tile.webp
 ```
-
-_(Actually, we pre-process with hugo, so maybe we don't need to?)_
 
 ---
 
@@ -37,9 +34,4 @@ _(Actually, we pre-process with hugo, so maybe we don't need to?)_
 
 Layout and SCSS/JS originally from [Forty](https://themes.gohugo.io/forty/) (and also [on github](https://github.com/MarcusVirg/forty)), but substantially revamped to minimize and streamline, and customize.
 
-The templates for Forty were strangely duplicative; I've endeavored to streamline this so that (for instance) both list and single pages can take advantage of the home page banner styles, tiles, etc. Now, any page can opt in to any/all of the following:
-
-- tiles
-- ~~"two" (what a name!)~~ REMOVED!
-- regular list items in "tiles" style?
-- ~~contact form~~ REMOVED!
+The templates for Forty were strangely redundant; I've endeavored to streamline this so that (for instance) both list and single pages can take advantage of the home page banner styles, tiles, etc. As of [May 2025](https://github.com/JaredReisinger/jaredreisinger.com/pull/2), this has been overhauled to use TailwindCSS and very minimal Alpine.js, removing a ton of custom CSS, JS, and vendored FontAwesome webfonts. In total, this change is a net reduction of around 28,000 lines of code.

@@ -4,7 +4,7 @@ description: Hi, my name is Jared...
 date: 2019-07-10T18:05:53-07:00
 
 banner:
-  class: major
+  # class: major
   title: Hi, my name is Jared...
   subtitle: |-
     I’ve been a professional software developer since 1994, working in companies of all sizes.

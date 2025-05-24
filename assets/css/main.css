@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@source "hugo_stats.json";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* lots of shadows to make it stronger */
+  --text-shadow-tile: 0 0 0.2em white, 0 0 1em white, 0 0 1em white, 0 0 1em white;
+
+  /* custom accent colors the 0.x digit of first value dropped by 0.2 */
+  --color-accent-1: oklch(0.717 0.08 205.041); /* cyan-200 */
+  --color-accent-2: oklch(0.702 0.063 306.703); /* purple-200 */
+  --color-accent-3: oklch(0.685 0.062 18.334); /* red-200 */
+  --color-accent-4: oklch(0.701 0.076 70.697); /* orange-200 */
+  --color-accent-5: oklch(0.682 0.059 254.128); /* blue-200 */
+  --color-accent-6: oklch(0.725 0.084 155.995); /* green-200 */
+}
+
+html {
+  /* set a larger base font size... can this be responsive? */
+  font-size: 1.2rem;
+}
+
+/* all links have a eased color transition... */
+a:not(.tile) {
+  @apply transition-colors ease-in-out hover:text-cyan-500;
+
+  & * {
+    @apply transition-colors ease-in-out hover:text-cyan-500;
+  }
+}
+
+/* remove the weird backticks around code... */
+code {
+  &::before {
+    content: '';
+  }
+  &::after {
+    content: '';
+  }
+}
+
+/* #header + * {
+  @apply pt-24;
+} */
